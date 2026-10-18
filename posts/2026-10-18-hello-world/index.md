@@ -1,17 +1,15 @@
 ---
-title: Hello, this is the devlog
+title: Hello world!
 date: 2026-10-18
 summary: Who is making this, what Klaar! is, and what to expect here.
 ---
 
-Hi, I'm Minsung. I'm a social designer, and I'm making my first game.
+Hi, I'm Minsung. I'm a social designer from Bron van Doen, a design studio in Eindhoven, and we also make games! Within our studio, we have something called Opgeruimde Bende, a game research practice that explores the concept and practice of play in society. We're good at moving fast and prototyping, and we're not built to deliver games the way the traditional industry does.
 
-The studio is called Opgeruimde Bende. I call it a game research practice: a tiny studio that stepped into play out of curiosity. We're good at moving fast and prototyping, and we're not built to deliver games the way the traditional industry does.
+Our first game in active development is Klaar! It's a number puzzle where you make the sum, calm at one end and fast at the other. It will come out first as a free web game, and explore how people can have fun, together, with just adding numbers.
 
-The game is Klaar!. It's a number puzzle where you make the sum, calm at one end and fast at the other. It will come out first as a free web game. It's still in active development.
+I direct and design the projects, and also create art, sound, and music. We use Claude and Cursor for coding, testing, and building. We are curious about what is uniquely possible when you build and test games this way.
 
-I'm the designer and the one who decides. Claude and Cursor do the coding and building under my direction. I'll be honest about that here, because a lot of what's interesting so far is what happens when you build a game that way.
-
-This devlog is where I'll write down the small things I find along the way: one moment, one number, one picture at a time. No big announcements, just notes from the workbench.
+This devlog is where I'll share quick thoughts along the way: nothing too ambitious, just small insights and pictures from behind the scenes.
 
 More soon.
