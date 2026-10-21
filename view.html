@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Devlog · Opgeruimde Bende</title>
-<!-- Temporary reader. Reads posts/posts.json and posts/<slug>/index.md. Delete when the real devlog front end exists; the posts stay as they are. -->
+<!-- Temporary reader. Reads posts/posts.json, posts/<slug>/index.md (?post=) and pages/<slug>/index.md (?page=). Delete when the real devlog front end exists; the posts stay as they are. -->
 <style>
   :root { --bg:#ECEAE5; --ink:#24252B; --muted:#6A675F; --accent:#B23A0C; }
   @media (prefers-color-scheme: dark) { :root { --bg:#2A2B30; --ink:#F1EFEA; --muted:#A3A19B; --accent:#F06A33; } }
@@ -44,9 +44,11 @@
   function get(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(url + ' ' + r.status); return r; }); }
   function fail(e) { out.textContent = 'Could not load: ' + e.message; }
 
-  var slug = new URLSearchParams(location.search).get('post');
+  var params = new URLSearchParams(location.search);
+  var slug = params.get('post'), dir = 'posts/';
+  if (!slug && params.get('page')) { slug = params.get('page'); dir = 'pages/'; }
   if (slug && /^[\w-]+$/.test(slug)) {
-    get('posts/' + slug + '/index.md').then(function (r) { return r.text(); }).then(function (t) {
+    get(dir + slug + '/index.md').then(function (r) { return r.text(); }).then(function (t) {
       var p = parse(t);
       document.title = (p.meta.title || slug) + ' · Opgeruimde Bende';
       out.innerHTML = '<h1>' + esc(p.meta.title || slug) + '</h1><p class="meta">' + esc(p.meta.date || '') + '</p><div id="body"></div>';
@@ -54,7 +56,7 @@
       body.innerHTML = marked.parse(p.body);
       body.querySelectorAll('img').forEach(function (im) {
         var s = im.getAttribute('src');
-        if (s && !/^(https?:|\/|data:)/.test(s)) im.src = 'posts/' + slug + '/' + s;
+        if (s && !/^(https?:|\/|data:)/.test(s)) im.src = dir + slug + '/' + s;
       });
     }).catch(fail);
   } else {
