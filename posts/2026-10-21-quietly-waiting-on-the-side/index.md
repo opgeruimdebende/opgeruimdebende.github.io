@@ -8,7 +8,9 @@ I caught myself staring at this board on my second screen, in between working on
 
 ![A Wa board at target 12 on a second screen, 43 clears done and 14 tiles left](fourteen-tiles-left.png)
 
-Aside from admitting I am by no means the best Klaar! player myself, it is like a streamer playing a puzzle game with tunnel vision while everybody watching sees the answer and pulls their hair out. Or a colleague walks past, glances at the screen, and sees it at once. Here is that same board from the start, if you want to try it: [play this board](https://opgeruimdebende.github.io/play/klaar/?p=K3-W12-9x14-G5K9RDK).
+Here is that same board from the start, if you want to try it: [play this board](https://opgeruimdebende.github.io/play/klaar/?p=K3-W12-9x14-G5K9RDK).
+
+Aside from admitting I am by no means the best Klaar! player myself, it is like a streamer playing a puzzle game with tunnel vision while everybody watching sees the answer and pulls their hair out. Or a colleague walks past, glances at the screen, and sees it at once.
 
 What I liked about that moment is that nothing was rushing me. The board just sat there and waited. It made me think of a chess or Go board left out in a lounge, or an online game where two players come back to it after long gaps. Wa has no timer, so it can be that kind of game: open on the side, slowly working towards a perfect clear with as few rewinds as possible. I hope it gives people a bit of joy and comfort in a busy day.
 
