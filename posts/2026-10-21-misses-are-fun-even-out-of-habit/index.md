@@ -10,7 +10,7 @@ I thought about Go players. Out of habit, they tap a stone on the edge of the ta
 
 That is the whole design. It is very short, with almost no tail, so one thud is gone before the next one arrives. It sits low. The first version was a bit high, so it was nudged slightly lower, and the highest takes were dropped. And there are four slightly different takes, played in turn, so a fast run of misses does not sound like one sound copied again and again. At most three can sound at once.
 
-Try one take to hear what the four are for. Habit taps plays sixteen misses, a tenth of a second apart. In one of my own Wa games before it had any sounds at all, there is a stretch of 11 misses in just over three seconds.
+Habit taps plays sixteen misses, a tenth of a second apart. Try one take to hear what the four are for. In one of my own Wa games before it had any sounds at all, there is a stretch of 11 misses in just over three seconds.
 
 <iframe src="/posts/2026-10-21-misses-are-fun-even-out-of-habit/habit-taps.html" title="Two buttons, Tap for a single miss and Habit taps for sixteen in a row, and a switch between four takes and one" width="100%" height="200" loading="lazy" style="border:0;border-radius:12px"></iframe>
 
