@@ -5,6 +5,7 @@ summary: Every build of Klaar!, newest first, small fixes included.
 ---
 
 ## 22 October 2026
+- **About Klaar!** A quiet card, from Settings or the desktop home, with who makes Klaar!, what's new, and links to this devlog and changelog.
 - Remove a profile you no longer need. Every profile except the one you are playing as has a Remove, with one confirmation and the offer to save a backup first.
 - Switching profiles on a phone now shows the new profile straight away.
 
