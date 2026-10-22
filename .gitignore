@@ -1,2 +1,6 @@
-# Raw images and files waiting to be processed for devlog posts. Never published.
+# Raw images and files waiting to be processed for posts. Never published.
 _inbox/
+node_modules/
+dist/
+.astro/
+.DS_Store

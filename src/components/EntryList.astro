@@ -1,0 +1,14 @@
+---
+import { type Entry, entryUrl, fmtDate, kinds, gameList } from '../lib/entries';
+interface Props { entries: Entry[] }
+const { entries } = Astro.props;
+---
+<ul class="entry-list">
+  {entries.map((e) => (
+    <li>
+      <p class="label"><time datetime={e.data.date.toISOString().slice(0, 10)}>{fmtDate(e.data.date)}</time> · {kinds[e.data.kind]}{e.data.game && <> · {gameList[e.data.game].name}</>}</p>
+      <h3><a href={entryUrl(e)}>{e.data.title}</a></h3>
+      <p class="summary">{e.data.summary}</p>
+    </li>
+  ))}
+</ul>

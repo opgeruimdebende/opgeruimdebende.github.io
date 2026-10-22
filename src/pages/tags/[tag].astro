@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import Window from '../../components/Window.astro';
+import EntryList from '../../components/EntryList.astro';
+import { allEntries, tagList } from '../../lib/entries';
+
+export async function getStaticPaths() {
+  const entries = await allEntries();
+  return Object.keys(tagList)
+    .map((tag) => ({ params: { tag }, props: { tag, entries: entries.filter((e) => e.data.tags.includes(tag)) } }))
+    .filter((p) => p.props.entries.length > 0);
+}
+const { tag, entries } = Astro.props;
+const t = tagList[tag];
+---
+<Base title={t.label} description={t.about} current="tags">
+  <Window name={`#${tag}`} front>
+    <p class="label"><a href="/tags/">Tag</a></p>
+    <h1 class="section-title" style="margin-top:var(--space-2)">{t.label}</h1>
+    <p class="lede">{t.about}</p>
+    <EntryList entries={entries} />
+  </Window>
+</Base>

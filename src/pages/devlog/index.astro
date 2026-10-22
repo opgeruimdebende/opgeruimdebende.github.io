@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import Window from '../../components/Window.astro';
+import EntryList from '../../components/EntryList.astro';
+import { allEntries } from '../../lib/entries';
+const entries = (await allEntries()).filter((e) => e.data.kind === 'devlog');
+---
+<Base title="Devlog" description="Short posts from making our games: one moment, one number, one picture." current="devlog">
+  <Window name="devlog.txt" front status={`${entries.length} posts, newest first`}>
+    <h1 class="section-title">Devlog</h1>
+    <EntryList entries={entries} />
+  </Window>
+</Base>

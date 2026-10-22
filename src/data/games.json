@@ -1,0 +1,11 @@
+{
+  "klaar": {
+    "name": "Klaar!",
+    "line": "A free number puzzle about the fun of adding.",
+    "state": "Dev preview",
+    "shelf": "oranje",
+    "play": "/play/klaar/",
+    "label": "/labels/klaar.png",
+    "labelAlt": "A Klaar! board in play"
+  }
+}

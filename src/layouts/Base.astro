@@ -1,0 +1,63 @@
+---
+// Page frame: menu bar, desk, footer. Fonts ship with the site, so a reader's browser contacts no one else.
+import '@fontsource/press-start-2p/400.css';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/400-italic.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '@fontsource/ibm-plex-mono/600.css';
+import '../styles/tokens.css';
+import '../styles/archive.css';
+import Wordmark from '../components/Wordmark.astro';
+
+interface Props { title: string; description?: string; noindex?: boolean; current?: 'devlog' | 'play' | 'tags' }
+const { title, description, noindex = false, current } = Astro.props;
+const siteName = 'Opgeruimde Bende';
+const fullTitle = title === siteName ? `${siteName}, game research practice` : `${title} · ${siteName}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const nav = [
+  { id: 'devlog', href: '/devlog/', label: 'Devlog' },
+  { id: 'play', href: '/play/', label: 'Play' },
+  { id: 'tags', href: '/tags/', label: 'Tags' },
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{noindex && <meta name="robots" content="noindex">}
+<title>{fullTitle}</title>
+{description && <meta name="description" content={description}>}
+<link rel="canonical" href={canonical}>
+<link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml">
+<meta property="og:title" content={title}>
+{description && <meta property="og:description" content={description}>}
+<meta name="theme-color" content="#D6D2C8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1828" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<header class="menubar">
+  <div class="menubar-inner">
+    <a class="home" href="/" aria-label="Opgeruimde Bende, home"><Wordmark size="small" /></a>
+    <nav aria-label="Main">
+      <ul>
+        {nav.map((n) => <li><a href={n.href} aria-current={current === n.id ? 'page' : undefined}>{n.label}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <slot />
+</main>
+<footer class="site-footer">
+  <div class="badges">
+    <a class="badge" href="https://creativecommons.org/licenses/by/4.0/" aria-label="Texts licensed CC BY 4.0"><span class="lb screen" aria-hidden="true">cc</span><span class="rt" aria-hidden="true"><span>CC BY</span><span>4.0</span></span></a>
+    <span class="badge" role="img" aria-label="No tracking"><span class="lb oranje" aria-hidden="true">0</span><span class="rt" aria-hidden="true"><span>No</span><span>tracking</span></span></span>
+    <span class="badge" role="img" aria-label="Work in progress"><span class="lb wip" aria-hidden="true"></span><span class="rt" aria-hidden="true"><span>Work in</span><span>progress</span></span></span>
+  </div>
+  <p class="fineprint">© 2026 Bron van Doen V.O.F. · Texts CC BY 4.0 · Site code MIT · Games all rights reserved · <a href="/rss.xml">RSS</a></p>
+</footer>
+</body>
+</html>

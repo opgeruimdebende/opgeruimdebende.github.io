@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import Window from '../../components/Window.astro';
+import Cartridge from '../../components/Cartridge.astro';
+import { gameList } from '../../lib/entries';
+---
+<Base title="Play" description="Our games and prototypes, playable in the browser." current="play">
+  <Window name="play" front status="Free, in your browser. Your progress stays on your device.">
+    <h1 class="section-title">Play</h1>
+    <div class="cartridges">
+      {Object.values(gameList).map((g) => <Cartridge game={g} />)}
+    </div>
+  </Window>
+</Base>

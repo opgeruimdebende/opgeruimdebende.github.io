@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Window from '../../components/Window.astro';
+import { gameList, fmtDate } from '../../lib/entries';
+
+export async function getStaticPaths() {
+  const logs = await getCollection('changelogs');
+  return logs.map((log) => ({ params: { game: log.data.game }, props: { log } }));
+}
+const { log } = Astro.props;
+const { Content } = await render(log);
+const game = gameList[log.data.game];
+---
+<Base title={log.data.title} description={log.data.summary} current="play">
+  <Window name="changelog.txt" front status={`Last change ${fmtDate(log.data.date)}`} statusEnd={game.name}>
+    <p class="label">Changelog · <a href={game.play}>{game.name}</a></p>
+    <h1 class="page-title">{log.data.title}</h1>
+    <p class="lede">{log.data.summary}</p>
+    <div class="prose"><Content /></div>
+  </Window>
+</Base>

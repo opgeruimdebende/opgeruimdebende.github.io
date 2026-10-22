@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Moved</title>
+<script>
+  // The old reader is retired. Released Klaar! builds still link here, so this page forwards:
+  // ?post=<id> to /entries/<id>/, ?page=klaar-changelog to /changelog/klaar/, anything else to /devlog/.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var post = q.get('post') || '', page = q.get('page') || '';
+    var to = '/devlog/';
+    if (/^[a-z0-9-]+$/.test(post)) to = '/entries/' + post + '/';
+    else if (/^([a-z0-9]+)-changelog$/.test(page)) to = '/changelog/' + page.replace(/-changelog$/, '') + '/';
+    location.replace(to + location.hash);
+  })();
+</script>
+</head>
+<body>
+<p>This page has moved. <a href="/devlog/">Go to the devlog</a>.</p>
+</body>
+</html>

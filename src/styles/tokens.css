@@ -1,0 +1,61 @@
+/* Opgeruimde Bende tokens: the site's copy of the design system "Opgeruimde Bende".
+   Change a value in the design system first, then here. Day is the default; Night follows the reader's system. */
+:root {
+  --desk: #D6D2C8;
+  --window: #F5F3EE;
+  --ink: #1C1B1F;
+  --ink-muted: #5A564E;
+  --frame: #1C1B1F;
+  --bevel-light: #FFFFFF;
+  --bevel-dark: #8C877C;
+  --oranje: #FF6A13;
+  --on-oranje: #1C1B1F;
+  --oranje-text: #B34200;
+  --link: #0B3DCC;
+  --link-visited: #6E2A9C;
+  --screen: #14243F;
+  --screen-text: #F5F3EE;
+  --cart: #BDBAB3;
+  --cart-groove: #8E8A82;
+  --cart-highlight: #E4E1DA;
+  --shelf-oranje: #D85A1E;
+  --shelf-navy: #13293F;
+  --shelf-maroon: #6E2222;
+  --shelf-polder: #2E6B3F;
+  --shadow-hard: 4px 4px 0 0 #1C1B1F;
+
+  --font-pixel: "Press Start 2P", "Courier New", monospace;
+  --font-text: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --stroke-frame: 2px;
+  --stroke-bevel: 2px;
+  --stroke-focus: 2px;
+  --blink-rate: 1060ms;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --desk: #0F1828;
+    --window: #18253B;
+    --ink: #EEEBE4;
+    --ink-muted: #A9A49A;
+    --frame: #8592AA;
+    --bevel-light: #34486A;
+    --bevel-dark: #070B14;
+    --oranje: #FF7A26;
+    --oranje-text: #FF9A55;
+    --link: #8FB3FF;
+    --link-visited: #CDA4F2;
+    --screen: #0A1220;
+    --screen-text: #EEEBE4;
+    --shadow-hard: 4px 4px 0 0 #070B14;
+    color-scheme: dark;
+  }
+}

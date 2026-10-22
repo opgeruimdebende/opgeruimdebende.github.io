@@ -1,0 +1,34 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Window from '../../components/Window.astro';
+import { allEntries, entryUrl, fmtDate, kinds, gameList, tagLabel, isoDate } from '../../lib/entries';
+
+export async function getStaticPaths() {
+  const entries = await allEntries();
+  return entries.map((entry, i) => ({ params: { id: entry.id }, props: { entry, newer: entries[i - 1], older: entries[i + 1] } }));
+}
+const { entry, newer, older } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const game = d.game ? gameList[d.game] : undefined;
+const file = `${d.kind}.txt`;
+---
+<Base title={d.title} description={d.summary} current={d.kind === 'devlog' ? 'devlog' : undefined}>
+  <Window name={file} tag="article" front status={game ? `${game.name} · ${fmtDate(d.date)}` : fmtDate(d.date)} statusEnd="For the love of play">
+    <p class="label"><time datetime={isoDate(d.date)}>{fmtDate(d.date)}</time> · {kinds[d.kind]}{game && <> · <a href={game.play}>{game.name}</a></>}{d.status === 'working' && <> · work in progress</>}</p>
+    <h1 class="page-title">{d.title}</h1>
+    <p class="lede">{d.summary}</p>
+    {d.href && <p><a class="button primary" href={d.href}>Play</a></p>}
+    <div class="prose"><Content /></div>
+    {d.tags.length > 0 && (
+      <ul class="tags" aria-label="Tags">
+        {d.tags.map((t) => <li><a class="label" href={`/tags/${t}/`}>#{tagLabel(t)}</a></li>)}
+      </ul>
+    )}
+  </Window>
+  <nav class="pager" aria-label="More entries">
+    {older ? <a class="button" href={entryUrl(older)}>← Older</a> : <span></span>}
+    {newer && <a class="button" href={entryUrl(newer)}>Newer →</a>}
+  </nav>
+</Base>

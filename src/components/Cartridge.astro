@@ -1,0 +1,21 @@
+---
+// A game on its shelf (design system, Cartridge). The label shows the game's own art.
+import type { Game } from '../lib/entries';
+interface Props { game: Game }
+const { game } = Astro.props;
+---
+<a class="cartridge-card" href={game.play}>
+  <div class={`shelf shelf-${game.shelf}`}>
+    <div class="cart" aria-hidden="true">
+      <div class="emboss">OPGERUIMDE BENDE</div>
+      <div class="label-slot">{game.label ? <img src={game.label} alt="" width="144" height="120" /> : game.name}</div>
+      <div class="notch"></div>
+      <div class="pins"></div>
+    </div>
+  </div>
+  <div class="meta">
+    <p class="label">Build · {game.state}</p>
+    <h3>{game.name}</h3>
+    <p>{game.line}</p>
+  </div>
+</a>

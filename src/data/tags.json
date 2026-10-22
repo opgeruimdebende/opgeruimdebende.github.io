@@ -1,0 +1,6 @@
+{
+  "boards": { "label": "Boards", "about": "How boards are built, and what the numbers say about them." },
+  "feel": { "label": "Feel", "about": "How playing feels: misses, marks, pauses, a board left waiting." },
+  "sound": { "label": "Sound", "about": "What the games sound like, and why." },
+  "practice": { "label": "Practice", "about": "Who we are and how we make things." }
+}

@@ -1,0 +1,13 @@
+---
+// A window: frame, bevel, orange title bar, content, optional status bar (design system, Window).
+interface Props { name: string; front?: boolean; status?: string; statusEnd?: string; tag?: 'section' | 'article' | 'div'; heading?: boolean }
+const { name, front = false, status, statusEnd, tag = 'section', heading = false } = Astro.props;
+const Tag = tag;
+---
+<Tag class:list={['window', { front }]}>
+  <div class="titlebar"><span class="box" aria-hidden="true"></span>{heading ? <h2>{name}</h2> : <span class="name">{name}</span>}</div>
+  <div class="window-body"><slot /></div>
+  {(status || statusEnd || Astro.slots.has('status')) && (
+    <div class="statusbar"><span>{status}<slot name="status" /></span>{statusEnd && <span>{statusEnd}</span>}</div>
+  )}
+</Tag>

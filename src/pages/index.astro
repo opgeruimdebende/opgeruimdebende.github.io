@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Window from '../components/Window.astro';
+import Wordmark from '../components/Wordmark.astro';
+import Cartridge from '../components/Cartridge.astro';
+import EntryList from '../components/EntryList.astro';
+import { allEntries, gameList } from '../lib/entries';
+const entries = await allEntries();
+const latest = entries.filter((e) => e.data.kind === 'devlog').slice(0, 5);
+---
+<Base title="Opgeruimde Bende" description="A game research practice by Bron van Doen that explores the concept and practice of play in society.">
+  <Window name="welcome.txt" front status="Eindhoven, NL" statusEnd={`${entries.length} entries`}>
+    <h1 style="margin:0"><Wordmark size="stacked" /></h1>
+    <p class="descriptor" style="margin:var(--space-3) 0 0">Game research practice</p>
+    <p class="tagline">For the love of play<span class="cursor" aria-hidden="true"></span></p>
+    <p class="intro">A game research practice by Bron van Doen that explores the concept and practice of play in society. This is where the work shows up while it is being made: devlog posts, notes and playable builds.</p>
+  </Window>
+  <div class="columns">
+    <Window name="devlog.txt" heading>
+      <EntryList entries={latest} />
+      <p class="more"><a href="/devlog/">All devlog posts</a></p>
+    </Window>
+    <Window name="play" heading>
+      <div class="cartridges">
+        {Object.values(gameList).map((g) => <Cartridge game={g} />)}
+      </div>
+      <p class="more"><a href="/changelog/klaar/">Klaar! changelog</a></p>
+    </Window>
+  </div>
+</Base>
