@@ -1,9 +1,16 @@
 ---
 title: Klaar! changelog
-date: 2026-10-22
+date: 2026-10-25
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 25 October 2026
+- The Hap clock eases back to normal over a moment in the last ten seconds, instead of snapping.
+- A "Saved" label that got stuck now turns back by itself.
+- A damaged row in your save no longer loses the whole save. The bad game is dropped and the rest stays.
+- A game opened from an old link stays in Recent games with its replay, but it no longer counts in your stats, gives a "New best", or enters the Wa average.
+- Klaar! draws only when the picture changes, so it is lighter on battery and warmth.
 
 ## 22 October 2026
 - **About Klaar!** A quiet card, from Settings or the desktop home, with who makes Klaar!, what's new, and links to this devlog and changelog.
