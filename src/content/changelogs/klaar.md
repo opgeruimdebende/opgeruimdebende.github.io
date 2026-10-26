@@ -1,9 +1,12 @@
 ---
 title: Klaar! changelog
-date: 2026-10-25
+date: 2026-10-26
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 26 October 2026
+- Klaar! now loads with about 4 MB less data on your first visit: the fonts were far bigger than the game needs. Nothing looks different.
 
 ## 25 October 2026
 - The Hap clock eases back to normal over a moment in the last ten seconds, instead of snapping.
