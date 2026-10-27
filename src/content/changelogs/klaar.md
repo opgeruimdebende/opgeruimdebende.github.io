@@ -1,9 +1,12 @@
 ---
 title: Klaar! changelog
-date: 2026-10-26
+date: 2026-10-27
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 27 October 2026
+- Load backup and About no longer cut off their last line on some phone widths.
 
 ## 26 October 2026
 - Klaar! now loads with about 4 MB less data on your first visit: the fonts were far bigger than the game needs. Nothing looks different.
