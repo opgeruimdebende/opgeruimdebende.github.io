@@ -1,9 +1,12 @@
 ---
 title: Klaar! changelog
-date: 2026-10-27
+date: 2026-10-28
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 28 October 2026
+- Opening a game in Stats no longer throws the list back to the top: it stays where you were, and the opened game is in view.
 
 ## 27 October 2026
 - Load backup and About no longer cut off their last line on some phone widths.
