@@ -7,6 +7,8 @@ game: klaar
 
 ## 27 October 2026
 - Load backup and About no longer cut off their last line on some phone widths.
+- On a phone or tablet, Enter code now opens your browser's own text box, so you can paste a code with a long press or from the keyboard, as on any website.
+- A Hap code entered on a phone now starts straight into the countdown instead of the Pause card.
 
 ## 26 October 2026
 - Klaar! now loads with about 4 MB less data on your first visit: the fonts were far bigger than the game needs. Nothing looks different.
