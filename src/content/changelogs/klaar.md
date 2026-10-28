@@ -6,6 +6,8 @@ game: klaar
 ---
 
 ## 28 October 2026
+- Klaar! has its own icon: a small board with 1, 2, 3 and 4, on your browser tab and when you add it to your home screen, instead of the engine's robot.
+- While the game loads, a short example board shows how to play: one drag across numbers that add up to the target, and they clear. In my test it loaded no slower than before.
 - Opening a game in Stats no longer throws the list back to the top: it stays where you were, and the opened game is in view.
 - Stats is much quicker with a long history. It shows your newest 15 games and a Show more button for the rest, and opening a game now changes only that game, not the whole list. In my test with 200 games saved, Stats opened in about a tenth of a second instead of most of a second.
 
