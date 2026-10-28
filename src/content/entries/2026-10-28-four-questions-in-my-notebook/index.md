@@ -1,6 +1,7 @@
 ---
-title: Four questions in my notebook
+title: Four questions to remember
 date: 2026-10-28
+updated: 2026-10-28
 summary: After the cold review I asked Claude how we stop repeating the same mistakes.
 kind: devlog
 game: klaar
