@@ -1,10 +1,11 @@
 ---
 // The name set in type: Opgeruimde neat, Bende jostled in whole font pixels (design system, Wordmark).
+// The closing "de" of Opgeruimde carries Bende's orange copy too, a nod to "de Bende"; it stays in the word, no space added.
 interface Props { size?: 'small' | 'stacked' }
 const { size = 'small' } = Astro.props;
 const ys = size === 'stacked' ? [0, -1, 1, -2, 1] : [0, -1, 0, -1, 0];
 ---
 <span class={`wordmark ${size}`}>
-  <span>Opgeruimde</span>
+  <span>Opgeruim<span class="de">de</span></span>
   <span class="bende"><span class="sr-only">Bende</span>{['B', 'e', 'n', 'd', 'e'].map((l, i) => <span aria-hidden="true" style={`--y:${ys[i]}`}>{l}</span>)}</span>
 </span>
