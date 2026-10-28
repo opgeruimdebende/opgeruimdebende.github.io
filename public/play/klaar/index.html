@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="robots" content="noindex">
-<meta name="klaar-build" content="c617d24 2026-10-28">
+<meta name="klaar-build" content="c319216 2026-10-28">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 <meta name="theme-color" content="#ECEAE5">
@@ -21,10 +21,10 @@
   --digit: #24252B; --ink: #24252B; --muted: #6A675F; --surface: #F7F6F3; --rule: #BDB8AE;
   --btn: #CFCBC2; --btn-edge: #A29D92; --btn-label: #24252B; --calm: #17706F;
 }
-html, body { margin: 0; padding: 0; height: 100%; }
-body { background: linear-gradient(var(--page-top), var(--page-bottom)) fixed; overflow: hidden; touch-action: none;
+html, body { margin: 0; padding: 0; height: 100%; background-color: #E2DFD8; }
+body { background-image: linear-gradient(var(--page-top), var(--page-bottom)); background-attachment: fixed; overflow: hidden; touch-action: none;
   font-family: "KlaarText", system-ui, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
-#canvas { display: block; position: absolute; inset: 0; }
+#canvas { display: block; position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
 #canvas:focus { outline: none; }
 #status { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
   background: linear-gradient(var(--page-top), var(--page-bottom)); z-index: 1; transition: opacity 300ms ease; }
@@ -102,7 +102,7 @@ body { background: linear-gradient(var(--page-top), var(--page-bottom)) fixed; o
     <svg id="demo" aria-hidden="true"></svg>
     <div class="caption" id="caption">Drag a rectangle that adds up to <b id="caption-target">12</b>.</div>
     <div class="progress" role="progressbar" aria-label="Loading Klaar!" id="progress">
-      <div class="track"><div class="fill unknown" id="fill"></div></div>
+      <div class="track"><div class="fill" id="fill"></div></div>
       <div class="amount" id="amount">Loading</div>
     </div>
     <div class="notice" id="notice" role="alert">
@@ -312,9 +312,18 @@ const KlaarStatus = (function () {
   document.getElementById('retry').addEventListener('click', () => window.location.reload());
   return {
     progress(current, total) {
-      if (current > 0 && total > 0) {
-        fill.classList.remove('unknown'); fill.style.width = (100 * current / total).toFixed(1) + '%';
-        amount.textContent = current >= total ? 'Starting' : `Loading ${mb(current)} of ${mb(total)} MB`;
+      if (total > 0) {
+        var percent = (100 * current / total).toFixed(1) + '%';
+        if (fill.classList.contains('unknown')) {
+          fill.style.transition = 'none';
+          fill.classList.remove('unknown');
+          fill.style.width = percent;
+          void fill.offsetWidth;
+          fill.style.transition = '';
+        } else {
+          fill.style.width = percent;
+        }
+        amount.textContent = current > 0 ? (current >= total ? 'Starting' : `Loading ${mb(current)} of ${mb(total)} MB`) : 'Loading';
       } else { fill.classList.add('unknown'); fill.style.width = ''; amount.textContent = 'Loading'; }
     },
     fail(title, text) {
@@ -326,7 +335,7 @@ const KlaarStatus = (function () {
   };
 })();
 /* Godot's own start-up, as in its default shell (Godot 4.7), with the status calls pointed at KlaarStatus. */
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":755380,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":757016,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 (function () {
