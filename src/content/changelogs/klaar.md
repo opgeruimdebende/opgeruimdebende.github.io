@@ -7,6 +7,7 @@ game: klaar
 
 ## 28 October 2026
 - Opening a game in Stats no longer throws the list back to the top: it stays where you were, and the opened game is in view.
+- Stats is much quicker with a long history. It shows your newest 15 games and a Show more button for the rest, and opening a game now changes only that game, not the whole list. In my test with 200 games saved, Stats opened in about a tenth of a second instead of most of a second.
 
 ## 27 October 2026
 - Load backup and About no longer cut off their last line on some phone widths.
