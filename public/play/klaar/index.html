@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="robots" content="noindex">
-<meta name="klaar-build" content="c319216 2026-10-28">
+<meta name="klaar-build" content="3dc88c0 2026-10-28">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 <meta name="theme-color" content="#ECEAE5">
@@ -40,11 +40,11 @@ body { background-image: linear-gradient(var(--page-top), var(--page-bottom)); b
   .wordmark { width: 224.12px; margin-top: 84px; flex: none; }
   .below { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 100%; }
   /* the board's top edge 99 px under the wordmark's cap top, where the home screen's mini board sits */
-  .below #demo { margin-top: 19.13px; }
+  .below #demo2 { margin-top: 19.13px; }
 }
 @media (max-width: 959.98px) { #status.tight .wordmark { margin-top: 44px; } }
 .below { display: flex; flex-direction: column; align-items: center; width: 100%; }
-#demo { margin-top: 44px; display: block; overflow: visible; }
+#demo2 { margin-top: 44px; display: block; overflow: visible; }
 .caption b { font-family: "KlaarDigits", "KlaarText", system-ui, sans-serif; font-weight: 700; color: var(--ink); }
 .caption { margin-top: 18px; font-size: 16px; line-height: 22px; color: var(--muted); text-align: center; }
 .progress { margin-top: 26px; width: 100%; max-width: 200px; }
@@ -60,9 +60,56 @@ body { background-image: linear-gradient(var(--page-top), var(--page-bottom)); b
 .notice button { margin-top: 10px; font: inherit; font-size: 16px; color: var(--btn-label); background: var(--btn); border: 0;
   border-radius: 12px; padding: 10px 18px; box-shadow: 0 3px 0 var(--btn-edge); cursor: pointer; }
 .notice button:active { transform: translateY(1.5px); box-shadow: 0 1.5px 0 var(--btn-edge); }
-#status.failed .caption, #status.failed .progress, #status.failed #demo { display: none; }
+#status.failed .caption, #status.failed .progress, #status.failed #demo2 { display: none; }
 #status.failed .notice { display: block; }
 
+/* loading-demo:begin */
+#demo2{position:relative;flex:none;overflow:visible}
+#demo2 *{position:absolute;box-sizing:border-box}
+#demo2 .d-board{left:0;background:#CFCBC2}
+.d-side{background:#ADA89E}
+.d-tok .d-side{left:0;width:100%}
+.d-tok .d-face{left:0;top:0;width:100%}
+.d-face{background:#FFFFFF;color:#24252B;text-align:center;font-family:"KlaarDigits",sans-serif;font-weight:700}
+.d-grp{left:0;top:0;opacity:0}
+.d-foot{opacity:0}
+.d-tag{text-align:center;font-family:"KlaarDigits",sans-serif;font-weight:700;opacity:0}
+.d-bar{transform-origin:0 0}
+.d-c{overflow:hidden}
+.d-sel{opacity:0}
+.d-caps{display:grid}
+.d-caps .d-cap{position:static;grid-area:1/1;opacity:0}
+.d-round{animation-duration:3400ms}
+.d-loop{animation-duration:10200ms}
+.d-on{animation-timing-function:linear;animation-iteration-count:infinite;animation-delay:var(--demo-delay,0ms);will-change:transform,opacity}
+.demo-still .d-on{animation-play-state:paused!important}
+@keyframes sel-calm-o{0%{opacity:0}2.941%{opacity:0}3.431%{opacity:0.314}3.922%{opacity:0.706}4.412%{opacity:0.901}4.902%{opacity:0.983}5.392%{opacity:1}28.922%{opacity:1}29.412%{opacity:0}100%{opacity:0}}
+@keyframes sel-calm-tr{0%{transform:translateX(0px)}15.686%{transform:translateX(0px)}16.176%{transform:translateX(1.881px)}16.667%{transform:translateX(4.492px)}17.157%{transform:translateX(7.395px)}17.647%{transform:translateX(10.621px)}18.137%{transform:translateX(14.202px)}19.118%{transform:translateX(22.052px)}21.569%{transform:translateX(42.887px)}22.549%{transform:translateX(51.016px)}23.529%{transform:translateX(58.682px)}24.02%{transform:translateX(62.217px)}24.51%{transform:translateX(65.384px)}25%{transform:translateX(67.88px)}25.49%{transform:translateX(69.525px)}25.98%{transform:translateX(70.513px)}26.471%{transform:translateX(71.073px)}27.451%{transform:translateX(71.447px)}28.922%{transform:translateX(71.135px)}33.824%{transform:translateX(68.939px)}37.255%{transform:translateX(68.144px)}40.196%{transform:translateX(67.998px)}56.863%{transform:translateX(68px)}57.353%{transform:translateX(0px)}100%{transform:translateX(0px)}}
+@keyframes sel-calm-bl{0%{transform:translateY(0px)}14.216%{transform:translateY(0px)}14.706%{transform:translateY(0.374px)}17.157%{transform:translateY(11.078px)}17.647%{transform:translateY(12.89px)}18.137%{transform:translateY(14.265px)}18.627%{transform:translateY(15.203px)}19.608%{transform:translateY(16.248px)}22.549%{transform:translateY(17.526px)}23.039%{transform:translateY(18.004px)}23.529%{transform:translateY(18.73px)}24.02%{transform:translateY(19.822px)}24.51%{transform:translateY(21.449px)}25%{transform:translateY(23.774px)}26.471%{transform:translateY(32.498px)}27.451%{transform:translateY(38.001px)}27.941%{transform:translateY(40.543px)}28.922%{transform:translateY(45.202px)}29.902%{transform:translateY(49.318px)}30.882%{transform:translateY(52.931px)}31.863%{transform:translateY(56.085px)}32.843%{transform:translateY(58.819px)}33.824%{transform:translateY(61.169px)}34.804%{transform:translateY(63.168px)}35.784%{transform:translateY(64.844px)}37.255%{transform:translateY(66.806px)}38.235%{transform:translateY(67.779px)}39.706%{transform:translateY(68.779px)}40.686%{transform:translateY(69.164px)}42.157%{transform:translateY(69.355px)}56.863%{transform:translateY(69.355px)}57.353%{transform:translateY(0px)}100%{transform:translateY(0px)}}
+@keyframes sel-calm-br{0%{transform:translate(0px,0px)}14.216%{transform:translate(0px,0px)}14.706%{transform:translate(0px,0.374px)}15.686%{transform:translate(0px,4.681px)}16.176%{transform:translate(1.881px,6.877px)}16.667%{transform:translate(4.492px,9.036px)}17.157%{transform:translate(7.395px,11.078px)}17.647%{transform:translate(10.621px,12.89px)}18.137%{transform:translate(14.202px,14.265px)}18.627%{transform:translate(18.046px,15.203px)}19.118%{transform:translate(22.052px,15.832px)}19.608%{transform:translate(26.161px,16.248px)}21.569%{transform:translate(42.887px,17.006px)}22.549%{transform:translate(51.016px,17.526px)}23.039%{transform:translate(54.925px,18.004px)}23.529%{transform:translate(58.682px,18.73px)}24.02%{transform:translate(62.217px,19.822px)}24.51%{transform:translate(65.384px,21.449px)}25%{transform:translate(67.88px,23.774px)}25.49%{transform:translate(69.525px,26.603px)}25.98%{transform:translate(70.513px,29.57px)}26.471%{transform:translate(71.073px,32.498px)}27.451%{transform:translate(71.447px,38.001px)}27.941%{transform:translate(71.417px,40.543px)}28.922%{transform:translate(71.135px,45.202px)}29.902%{transform:translate(70.701px,49.318px)}30.882%{transform:translate(70.221px,52.931px)}31.863%{transform:translate(69.748px,56.085px)}32.843%{transform:translate(69.315px,58.819px)}33.824%{transform:translate(68.939px,61.169px)}34.804%{transform:translate(68.629px,63.168px)}35.784%{transform:translate(68.386px,64.844px)}37.255%{transform:translate(68.144px,66.806px)}38.235%{transform:translate(68.055px,67.779px)}39.706%{transform:translate(68.002px,68.779px)}40.196%{transform:translate(67.998px,68.998px)}40.686%{transform:translate(67.998px,69.164px)}42.157%{transform:translate(68px,69.355px)}56.863%{transform:translate(68px,69.355px)}57.353%{transform:translate(0px,0px)}100%{transform:translate(0px,0px)}}
+@keyframes sel-calm-hx{0%{transform:scaleX(0)}15.686%{transform:scaleX(0)}16.176%{transform:scaleX(0.0188)}16.667%{transform:scaleX(0.0449)}17.157%{transform:scaleX(0.074)}17.647%{transform:scaleX(0.1062)}18.137%{transform:scaleX(0.142)}19.118%{transform:scaleX(0.2205)}21.569%{transform:scaleX(0.4289)}22.549%{transform:scaleX(0.5102)}23.529%{transform:scaleX(0.5868)}24.02%{transform:scaleX(0.6222)}24.51%{transform:scaleX(0.6538)}25%{transform:scaleX(0.6788)}25.49%{transform:scaleX(0.6952)}25.98%{transform:scaleX(0.7051)}26.471%{transform:scaleX(0.7107)}27.451%{transform:scaleX(0.7145)}28.922%{transform:scaleX(0.7113)}33.824%{transform:scaleX(0.6894)}37.255%{transform:scaleX(0.6814)}40.196%{transform:scaleX(0.68)}56.863%{transform:scaleX(0.68)}57.353%{transform:scaleX(0)}100%{transform:scaleX(0)}}
+@keyframes sel-calm-hb{0%{transform:translateY(0px) scaleX(0)}8.333%{transform:translateY(0px) scaleX(0)}8.824%{transform:translateY(0.678px) scaleX(0)}9.804%{transform:translateY(2.41px) scaleX(0)}11.275%{transform:translateY(5.83px) scaleX(0)}12.745%{transform:translateY(10.304px) scaleX(0)}14.216%{transform:translateY(15.827px) scaleX(0)}15.686%{transform:translateY(22.181px) scaleX(0)}16.176%{transform:translateY(24.377px) scaleX(0.0188)}16.667%{transform:translateY(26.536px) scaleX(0.0449)}17.157%{transform:translateY(28.578px) scaleX(0.074)}17.647%{transform:translateY(30.39px) scaleX(0.1062)}18.137%{transform:translateY(31.765px) scaleX(0.142)}18.627%{transform:translateY(32.703px) scaleX(0.1805)}19.118%{transform:translateY(33.332px) scaleX(0.2205)}19.608%{transform:translateY(33.748px) scaleX(0.2616)}21.569%{transform:translateY(34.506px) scaleX(0.4289)}22.549%{transform:translateY(35.026px) scaleX(0.5102)}23.039%{transform:translateY(35.504px) scaleX(0.5493)}23.529%{transform:translateY(36.23px) scaleX(0.5868)}24.02%{transform:translateY(37.322px) scaleX(0.6222)}24.51%{transform:translateY(38.949px) scaleX(0.6538)}25%{transform:translateY(41.274px) scaleX(0.6788)}25.49%{transform:translateY(44.103px) scaleX(0.6952)}25.98%{transform:translateY(47.07px) scaleX(0.7051)}26.471%{transform:translateY(49.998px) scaleX(0.7107)}27.451%{transform:translateY(55.501px) scaleX(0.7145)}27.941%{transform:translateY(58.043px) scaleX(0.7142)}28.922%{transform:translateY(62.702px) scaleX(0.7113)}29.902%{transform:translateY(66.818px) scaleX(0.707)}30.882%{transform:translateY(70.431px) scaleX(0.7022)}31.863%{transform:translateY(73.585px) scaleX(0.6975)}32.843%{transform:translateY(76.319px) scaleX(0.6932)}33.824%{transform:translateY(78.669px) scaleX(0.6894)}34.804%{transform:translateY(80.668px) scaleX(0.6863)}35.784%{transform:translateY(82.344px) scaleX(0.6839)}37.255%{transform:translateY(84.306px) scaleX(0.6814)}38.235%{transform:translateY(85.279px) scaleX(0.6806)}39.706%{transform:translateY(86.279px) scaleX(0.68)}40.196%{transform:translateY(86.498px) scaleX(0.68)}40.686%{transform:translateY(86.664px) scaleX(0.68)}42.157%{transform:translateY(86.855px) scaleX(0.68)}56.863%{transform:translateY(86.855px) scaleX(0.68)}57.353%{transform:translateY(0px) scaleX(0)}100%{transform:translateY(0px) scaleX(0)}}
+@keyframes sel-calm-vy{0%{transform:scaleY(0)}14.216%{transform:scaleY(0)}14.706%{transform:scaleY(0.0037)}17.157%{transform:scaleY(0.1108)}17.647%{transform:scaleY(0.1289)}18.137%{transform:scaleY(0.1426)}18.627%{transform:scaleY(0.152)}19.608%{transform:scaleY(0.1625)}22.549%{transform:scaleY(0.1753)}23.039%{transform:scaleY(0.18)}23.529%{transform:scaleY(0.1873)}24.02%{transform:scaleY(0.1982)}24.51%{transform:scaleY(0.2145)}25%{transform:scaleY(0.2377)}26.471%{transform:scaleY(0.325)}27.451%{transform:scaleY(0.38)}27.941%{transform:scaleY(0.4054)}28.922%{transform:scaleY(0.452)}29.902%{transform:scaleY(0.4932)}30.882%{transform:scaleY(0.5293)}31.863%{transform:scaleY(0.5609)}32.843%{transform:scaleY(0.5882)}33.824%{transform:scaleY(0.6117)}34.804%{transform:scaleY(0.6317)}35.784%{transform:scaleY(0.6484)}37.255%{transform:scaleY(0.6681)}38.235%{transform:scaleY(0.6778)}39.706%{transform:scaleY(0.6878)}40.686%{transform:scaleY(0.6916)}42.157%{transform:scaleY(0.6936)}56.863%{transform:scaleY(0.6936)}57.353%{transform:scaleY(0)}100%{transform:scaleY(0)}}
+@keyframes sel-calm-vr{0%{transform:translateX(0px) scaleY(0)}8.824%{transform:translateX(0.038px) scaleY(0)}10.294%{transform:translateX(2.02px) scaleY(0)}11.765%{transform:translateX(4.694px) scaleY(0)}13.235%{transform:translateX(8.252px) scaleY(0)}14.216%{transform:translateX(11.257px) scaleY(0)}14.706%{transform:translateX(12.993px) scaleY(0.0037)}15.196%{transform:translateX(14.91px) scaleY(0.025)}16.176%{transform:translateX(19.381px) scaleY(0.0688)}16.667%{transform:translateX(21.992px) scaleY(0.0904)}17.157%{transform:translateX(24.895px) scaleY(0.1108)}17.647%{transform:translateX(28.121px) scaleY(0.1289)}18.137%{transform:translateX(31.702px) scaleY(0.1426)}18.627%{transform:translateX(35.546px) scaleY(0.152)}19.118%{transform:translateX(39.552px) scaleY(0.1583)}19.608%{transform:translateX(43.661px) scaleY(0.1625)}21.569%{transform:translateX(60.387px) scaleY(0.1701)}22.549%{transform:translateX(68.516px) scaleY(0.1753)}23.039%{transform:translateX(72.425px) scaleY(0.18)}23.529%{transform:translateX(76.182px) scaleY(0.1873)}24.02%{transform:translateX(79.717px) scaleY(0.1982)}24.51%{transform:translateX(82.884px) scaleY(0.2145)}25%{transform:translateX(85.38px) scaleY(0.2377)}25.49%{transform:translateX(87.025px) scaleY(0.266)}25.98%{transform:translateX(88.013px) scaleY(0.2957)}26.471%{transform:translateX(88.573px) scaleY(0.325)}27.451%{transform:translateX(88.947px) scaleY(0.38)}27.941%{transform:translateX(88.917px) scaleY(0.4054)}28.922%{transform:translateX(88.635px) scaleY(0.452)}29.902%{transform:translateX(88.201px) scaleY(0.4932)}30.882%{transform:translateX(87.721px) scaleY(0.5293)}31.863%{transform:translateX(87.248px) scaleY(0.5609)}32.843%{transform:translateX(86.815px) scaleY(0.5882)}33.824%{transform:translateX(86.439px) scaleY(0.6117)}34.804%{transform:translateX(86.129px) scaleY(0.6317)}35.784%{transform:translateX(85.886px) scaleY(0.6484)}37.255%{transform:translateX(85.644px) scaleY(0.6681)}38.235%{transform:translateX(85.555px) scaleY(0.6778)}39.706%{transform:translateX(85.502px) scaleY(0.6878)}40.196%{transform:translateX(85.498px) scaleY(0.69)}40.686%{transform:translateX(85.498px) scaleY(0.6916)}42.157%{transform:translateX(85.5px) scaleY(0.6936)}56.863%{transform:translateX(85.5px) scaleY(0.6936)}57.353%{transform:translateX(0px) scaleY(0)}100%{transform:translateX(0px) scaleY(0)}}
+@keyframes sel-calm-fm{0%{transform:scale(0,0)}9.804%{transform:scale(0,0)}10.294%{transform:scale(0,0.0094)}10.784%{transform:scale(0.0033,0.0208)}11.765%{transform:scale(0.0219,0.047)}12.745%{transform:scale(0.0445,0.078)}13.235%{transform:scale(0.0575,0.0953)}13.725%{transform:scale(0.0718,0.1138)}14.706%{transform:scale(0.1049,0.1537)}15.686%{transform:scale(0.1453,0.1968)}16.176%{transform:scale(0.1688,0.2188)}16.667%{transform:scale(0.1949,0.2404)}17.157%{transform:scale(0.224,0.2608)}17.647%{transform:scale(0.2562,0.2789)}18.137%{transform:scale(0.292,0.2926)}18.627%{transform:scale(0.3305,0.302)}19.118%{transform:scale(0.3705,0.3083)}19.608%{transform:scale(0.4116,0.3125)}21.569%{transform:scale(0.5789,0.3201)}22.549%{transform:scale(0.6602,0.3253)}23.039%{transform:scale(0.6993,0.33)}23.529%{transform:scale(0.7368,0.3373)}24.02%{transform:scale(0.7722,0.3482)}24.51%{transform:scale(0.8038,0.3645)}25%{transform:scale(0.8288,0.3877)}25.49%{transform:scale(0.8452,0.416)}25.98%{transform:scale(0.8551,0.4457)}26.471%{transform:scale(0.8607,0.475)}27.451%{transform:scale(0.8645,0.53)}27.941%{transform:scale(0.8642,0.5554)}28.922%{transform:scale(0.8613,0.602)}29.902%{transform:scale(0.857,0.6432)}30.882%{transform:scale(0.8522,0.6793)}31.863%{transform:scale(0.8475,0.7109)}32.843%{transform:scale(0.8432,0.7382)}33.824%{transform:scale(0.8394,0.7617)}34.804%{transform:scale(0.8363,0.7817)}35.784%{transform:scale(0.8339,0.7984)}37.255%{transform:scale(0.8314,0.8181)}38.235%{transform:scale(0.8306,0.8278)}39.706%{transform:scale(0.83,0.8378)}40.196%{transform:scale(0.83,0.84)}40.686%{transform:scale(0.83,0.8416)}42.157%{transform:scale(0.83,0.8436)}56.863%{transform:scale(0.83,0.8436)}57.353%{transform:scale(0,0)}100%{transform:scale(0,0)}}
+@keyframes sel-exact-o{0%{opacity:0}28.922%{opacity:0}29.412%{opacity:1}56.863%{opacity:1}57.353%{opacity:0}100%{opacity:0}}
+@keyframes sel-exact-hb{0%{transform:translateY(0px) scaleX(0)}9.314%{transform:translateY(0px) scaleX(0)}9.804%{transform:translateY(0.91px) scaleX(0)}11.275%{transform:translateY(4.33px) scaleX(0)}12.745%{transform:translateY(8.804px) scaleX(0)}14.216%{transform:translateY(14.327px) scaleX(0)}15.686%{transform:translateY(20.681px) scaleX(0)}16.176%{transform:translateY(22.877px) scaleX(0.0188)}16.667%{transform:translateY(25.036px) scaleX(0.0449)}17.157%{transform:translateY(27.078px) scaleX(0.074)}17.647%{transform:translateY(28.89px) scaleX(0.1062)}18.137%{transform:translateY(30.265px) scaleX(0.142)}18.627%{transform:translateY(31.203px) scaleX(0.1805)}19.118%{transform:translateY(31.832px) scaleX(0.2205)}19.608%{transform:translateY(32.248px) scaleX(0.2616)}21.569%{transform:translateY(33.006px) scaleX(0.4289)}22.549%{transform:translateY(33.526px) scaleX(0.5102)}23.039%{transform:translateY(34.004px) scaleX(0.5493)}23.529%{transform:translateY(34.73px) scaleX(0.5868)}24.02%{transform:translateY(35.822px) scaleX(0.6222)}24.51%{transform:translateY(37.449px) scaleX(0.6538)}25%{transform:translateY(39.774px) scaleX(0.6788)}25.49%{transform:translateY(42.603px) scaleX(0.6952)}25.98%{transform:translateY(45.57px) scaleX(0.7051)}26.471%{transform:translateY(48.498px) scaleX(0.7107)}27.451%{transform:translateY(54.001px) scaleX(0.7145)}27.941%{transform:translateY(56.543px) scaleX(0.7142)}28.922%{transform:translateY(61.202px) scaleX(0.7113)}29.902%{transform:translateY(65.318px) scaleX(0.707)}30.882%{transform:translateY(68.931px) scaleX(0.7022)}31.863%{transform:translateY(72.085px) scaleX(0.6975)}32.843%{transform:translateY(74.819px) scaleX(0.6932)}33.824%{transform:translateY(77.169px) scaleX(0.6894)}34.804%{transform:translateY(79.168px) scaleX(0.6863)}35.784%{transform:translateY(80.844px) scaleX(0.6839)}37.255%{transform:translateY(82.806px) scaleX(0.6814)}38.235%{transform:translateY(83.779px) scaleX(0.6806)}39.706%{transform:translateY(84.779px) scaleX(0.68)}40.196%{transform:translateY(84.998px) scaleX(0.68)}40.686%{transform:translateY(85.164px) scaleX(0.68)}42.157%{transform:translateY(85.355px) scaleX(0.68)}56.863%{transform:translateY(85.355px) scaleX(0.68)}57.353%{transform:translateY(0px) scaleX(0)}100%{transform:translateY(0px) scaleX(0)}}
+@keyframes sel-exact-vr{0%{transform:translateX(0px) scaleY(0)}9.804%{transform:translateX(0px) scaleY(0)}10.294%{transform:translateX(0.52px) scaleY(0)}11.765%{transform:translateX(3.194px) scaleY(0)}12.745%{transform:translateX(5.452px) scaleY(0)}13.725%{transform:translateX(8.182px) scaleY(0)}14.216%{transform:translateX(9.757px) scaleY(0)}14.706%{transform:translateX(11.493px) scaleY(0.0037)}15.686%{transform:translateX(15.53px) scaleY(0.0468)}16.176%{transform:translateX(17.881px) scaleY(0.0688)}16.667%{transform:translateX(20.492px) scaleY(0.0904)}17.157%{transform:translateX(23.395px) scaleY(0.1108)}17.647%{transform:translateX(26.621px) scaleY(0.1289)}18.137%{transform:translateX(30.202px) scaleY(0.1426)}18.627%{transform:translateX(34.046px) scaleY(0.152)}19.118%{transform:translateX(38.052px) scaleY(0.1583)}19.608%{transform:translateX(42.161px) scaleY(0.1625)}21.569%{transform:translateX(58.887px) scaleY(0.1701)}22.549%{transform:translateX(67.016px) scaleY(0.1753)}23.039%{transform:translateX(70.925px) scaleY(0.18)}23.529%{transform:translateX(74.682px) scaleY(0.1873)}24.02%{transform:translateX(78.217px) scaleY(0.1982)}24.51%{transform:translateX(81.384px) scaleY(0.2145)}25%{transform:translateX(83.88px) scaleY(0.2377)}25.49%{transform:translateX(85.525px) scaleY(0.266)}25.98%{transform:translateX(86.513px) scaleY(0.2957)}26.471%{transform:translateX(87.073px) scaleY(0.325)}27.451%{transform:translateX(87.447px) scaleY(0.38)}27.941%{transform:translateX(87.417px) scaleY(0.4054)}28.922%{transform:translateX(87.135px) scaleY(0.452)}29.902%{transform:translateX(86.701px) scaleY(0.4932)}30.882%{transform:translateX(86.221px) scaleY(0.5293)}31.863%{transform:translateX(85.748px) scaleY(0.5609)}32.843%{transform:translateX(85.315px) scaleY(0.5882)}33.824%{transform:translateX(84.939px) scaleY(0.6117)}34.804%{transform:translateX(84.629px) scaleY(0.6317)}35.784%{transform:translateX(84.386px) scaleY(0.6484)}37.255%{transform:translateX(84.144px) scaleY(0.6681)}38.235%{transform:translateX(84.055px) scaleY(0.6778)}39.706%{transform:translateX(84.002px) scaleY(0.6878)}40.196%{transform:translateX(83.998px) scaleY(0.69)}40.686%{transform:translateX(83.998px) scaleY(0.6916)}42.157%{transform:translateX(84px) scaleY(0.6936)}56.863%{transform:translateX(84px) scaleY(0.6936)}57.353%{transform:translateX(0px) scaleY(0)}100%{transform:translateX(0px) scaleY(0)}}
+@keyframes sel-exact-fm{0%{transform:scale(0,0)}10.784%{transform:scale(0,0)}11.275%{transform:scale(0,0.0033)}11.765%{transform:scale(0,0.017)}12.255%{transform:scale(0.0027,0.0319)}13.235%{transform:scale(0.0275,0.0653)}13.725%{transform:scale(0.0418,0.0838)}14.706%{transform:scale(0.0749,0.1237)}15.686%{transform:scale(0.1153,0.1668)}16.176%{transform:scale(0.1388,0.1888)}16.667%{transform:scale(0.1649,0.2104)}17.157%{transform:scale(0.194,0.2308)}17.647%{transform:scale(0.2262,0.2489)}18.137%{transform:scale(0.262,0.2626)}18.627%{transform:scale(0.3005,0.272)}19.118%{transform:scale(0.3405,0.2783)}19.608%{transform:scale(0.3816,0.2825)}21.569%{transform:scale(0.5489,0.2901)}22.549%{transform:scale(0.6302,0.2953)}23.039%{transform:scale(0.6693,0.3)}23.529%{transform:scale(0.7068,0.3073)}24.02%{transform:scale(0.7422,0.3182)}24.51%{transform:scale(0.7738,0.3345)}25%{transform:scale(0.7988,0.3577)}25.49%{transform:scale(0.8152,0.386)}25.98%{transform:scale(0.8251,0.4157)}26.471%{transform:scale(0.8307,0.445)}27.451%{transform:scale(0.8345,0.5)}27.941%{transform:scale(0.8342,0.5254)}28.922%{transform:scale(0.8313,0.572)}29.902%{transform:scale(0.827,0.6132)}30.882%{transform:scale(0.8222,0.6493)}31.863%{transform:scale(0.8175,0.6809)}32.843%{transform:scale(0.8132,0.7082)}33.824%{transform:scale(0.8094,0.7317)}34.804%{transform:scale(0.8063,0.7517)}35.784%{transform:scale(0.8039,0.7684)}37.255%{transform:scale(0.8014,0.7881)}38.235%{transform:scale(0.8006,0.7978)}39.706%{transform:scale(0.8,0.8078)}40.196%{transform:scale(0.8,0.81)}40.686%{transform:scale(0.8,0.8116)}42.157%{transform:scale(0.8,0.8136)}56.863%{transform:scale(0.8,0.8136)}57.353%{transform:scale(0,0)}100%{transform:scale(0,0)}}
+@keyframes tok-1{0%{transform:translateY(0px) scale(1);opacity:1}16.176%{transform:translateY(0px) scale(1);opacity:1}17.647%{transform:translateY(0.594px) scale(1);opacity:1}19.118%{transform:translateY(0.928px) scale(1);opacity:1}21.078%{transform:translateY(1.157px) scale(1);opacity:1}24.02%{transform:translateY(1.293px) scale(1);opacity:1}30.392%{transform:translateY(1.35px) scale(1);opacity:1}57.353%{transform:translateY(1.355px) scale(1);opacity:1}57.843%{transform:translateY(1.355px) scale(0.9621);opacity:0.953}58.333%{transform:translateY(1.355px) scale(0.8858);opacity:0.857}58.824%{transform:translateY(1.355px) scale(0.7778);opacity:0.722}59.314%{transform:translateY(1.355px) scale(0.6619);opacity:0.577}59.804%{transform:translateY(1.355px) scale(0.558);opacity:0.447}60.294%{transform:translateY(1.355px) scale(0.472);opacity:0.34}60.784%{transform:translateY(1.355px) scale(0.4029);opacity:0.254}61.275%{transform:translateY(1.355px) scale(0.3481);opacity:0.185}61.765%{transform:translateY(1.355px) scale(0.3049);opacity:0.131}62.255%{transform:translateY(1.355px) scale(0.2713);opacity:0.089}62.745%{transform:translateY(1.355px) scale(0.2456);opacity:0.057}63.235%{transform:translateY(1.355px) scale(0.2266);opacity:0.033}63.725%{transform:translateY(1.355px) scale(0.2132);opacity:0.017}64.216%{transform:translateY(1.355px) scale(0.2048);opacity:0.006}65.196%{transform:translateY(1.355px) scale(0.2);opacity:0}90.686%{transform:translateY(1.355px) scale(0.2);opacity:0}91.176%{transform:translateY(0px) scale(1);opacity:1}100%{transform:translateY(0px) scale(1);opacity:1}}
+@keyframes tok-2{0%{transform:translateY(0px) scale(1);opacity:1}21.569%{transform:translateY(0px) scale(1);opacity:1}23.039%{transform:translateY(0.594px) scale(1);opacity:1}24.51%{transform:translateY(0.928px) scale(1);opacity:1}26.471%{transform:translateY(1.157px) scale(1);opacity:1}29.412%{transform:translateY(1.293px) scale(1);opacity:1}35.294%{transform:translateY(1.349px) scale(1);opacity:1}57.353%{transform:translateY(1.355px) scale(1);opacity:1}57.843%{transform:translateY(1.355px) scale(0.9621);opacity:0.953}58.333%{transform:translateY(1.355px) scale(0.8858);opacity:0.857}58.824%{transform:translateY(1.355px) scale(0.7778);opacity:0.722}59.314%{transform:translateY(1.355px) scale(0.6619);opacity:0.577}59.804%{transform:translateY(1.355px) scale(0.558);opacity:0.447}60.294%{transform:translateY(1.355px) scale(0.472);opacity:0.34}60.784%{transform:translateY(1.355px) scale(0.4029);opacity:0.254}61.275%{transform:translateY(1.355px) scale(0.3481);opacity:0.185}61.765%{transform:translateY(1.355px) scale(0.3049);opacity:0.131}62.255%{transform:translateY(1.355px) scale(0.2713);opacity:0.089}62.745%{transform:translateY(1.355px) scale(0.2456);opacity:0.057}63.235%{transform:translateY(1.355px) scale(0.2266);opacity:0.033}63.725%{transform:translateY(1.355px) scale(0.2132);opacity:0.017}64.216%{transform:translateY(1.355px) scale(0.2048);opacity:0.006}65.196%{transform:translateY(1.355px) scale(0.2);opacity:0}90.686%{transform:translateY(1.355px) scale(0.2);opacity:0}91.176%{transform:translateY(0px) scale(1);opacity:1}100%{transform:translateY(0px) scale(1);opacity:1}}
+@keyframes tok-5{0%{transform:translateY(0px) scale(1);opacity:1}28.922%{transform:translateY(0px) scale(1);opacity:1}29.902%{transform:translateY(0.433px) scale(1);opacity:1}31.373%{transform:translateY(0.837px) scale(1);opacity:1}33.333%{transform:translateY(1.115px) scale(1);opacity:1}35.294%{transform:translateY(1.244px) scale(1);opacity:1}40.686%{transform:translateY(1.342px) scale(1);opacity:1}57.353%{transform:translateY(1.355px) scale(1);opacity:1}57.843%{transform:translateY(1.355px) scale(0.9621);opacity:0.953}58.333%{transform:translateY(1.355px) scale(0.8858);opacity:0.857}58.824%{transform:translateY(1.355px) scale(0.7778);opacity:0.722}59.314%{transform:translateY(1.355px) scale(0.6619);opacity:0.577}59.804%{transform:translateY(1.355px) scale(0.558);opacity:0.447}60.294%{transform:translateY(1.355px) scale(0.472);opacity:0.34}60.784%{transform:translateY(1.355px) scale(0.4029);opacity:0.254}61.275%{transform:translateY(1.355px) scale(0.3481);opacity:0.185}61.765%{transform:translateY(1.355px) scale(0.3049);opacity:0.131}62.255%{transform:translateY(1.355px) scale(0.2713);opacity:0.089}62.745%{transform:translateY(1.355px) scale(0.2456);opacity:0.057}63.235%{transform:translateY(1.355px) scale(0.2266);opacity:0.033}63.725%{transform:translateY(1.355px) scale(0.2132);opacity:0.017}64.216%{transform:translateY(1.355px) scale(0.2048);opacity:0.006}65.196%{transform:translateY(1.355px) scale(0.2);opacity:0}90.686%{transform:translateY(1.355px) scale(0.2);opacity:0}91.176%{transform:translateY(0px) scale(1);opacity:1}100%{transform:translateY(0px) scale(1);opacity:1}}
+@keyframes foot{0%{opacity:0}57.353%{opacity:0}57.843%{opacity:0.047}58.333%{opacity:0.143}59.314%{opacity:0.423}59.804%{opacity:0.553}60.294%{opacity:0.66}60.784%{opacity:0.746}61.275%{opacity:0.815}62.255%{opacity:0.911}63.235%{opacity:0.967}64.216%{opacity:0.994}65.196%{opacity:1}91.176%{opacity:1}91.667%{opacity:0.962}92.157%{opacity:0.887}92.647%{opacity:0.779}93.627%{opacity:0.532}94.118%{opacity:0.424}94.608%{opacity:0.334}95.098%{opacity:0.259}95.588%{opacity:0.198}96.569%{opacity:0.107}97.549%{opacity:0.05}98.529%{opacity:0.017}100%{opacity:0}}
+@keyframes tag-s0{0%{transform:translateX(98.56px);opacity:0}16.176%{transform:translateX(98.56px);opacity:0}16.667%{transform:translateX(64.166px);opacity:1}17.647%{transform:translateX(67.231px);opacity:1}18.137%{transform:translateX(69.021px);opacity:1}19.118%{transform:translateX(72.946px);opacity:1}21.569%{transform:translateX(83.363px);opacity:1}22.059%{transform:translateX(83.363px);opacity:0}99.51%{transform:translateX(83.363px);opacity:0}100%{transform:translateX(98.56px);opacity:0}}
+@keyframes tag-s1{0%{transform:translateX(98.56px);opacity:0}21.569%{transform:translateX(98.56px);opacity:0}22.059%{transform:translateX(85.417px);opacity:1}23.039%{transform:translateX(89.383px);opacity:1}24.02%{transform:translateX(93.028px);opacity:1}24.51%{transform:translateX(94.612px);opacity:1}25%{transform:translateX(95.86px);opacity:1}25.49%{transform:translateX(96.682px);opacity:1}25.98%{transform:translateX(97.177px);opacity:1}26.961%{transform:translateX(97.597px);opacity:1}28.922%{transform:translateX(97.487px);opacity:1}29.412%{transform:translateX(97.487px);opacity:0}99.51%{transform:translateX(97.487px);opacity:0}100%{transform:translateX(98.56px);opacity:0}}
+@keyframes tag-s2{0%{transform:translateX(98.56px);opacity:0}28.922%{transform:translateX(98.56px);opacity:0}29.412%{transform:translateX(97.384px);opacity:1}32.353%{transform:translateX(96.683px);opacity:1}36.275%{transform:translateX(96.065px);opacity:1}40.686%{transform:translateX(95.919px);opacity:1}69.118%{transform:translateX(95.92px);opacity:1}83.824%{transform:translateX(95.92px);opacity:0}99.51%{transform:translateX(95.92px);opacity:0}100%{transform:translateX(98.56px);opacity:0}}
+@keyframes grp-0{0%{opacity:1}30.229%{opacity:1}30.392%{opacity:0}97.059%{opacity:0}97.222%{opacity:0.038}97.386%{opacity:0.113}97.549%{opacity:0.221}97.876%{opacity:0.468}98.039%{opacity:0.576}98.203%{opacity:0.666}98.366%{opacity:0.741}98.529%{opacity:0.802}98.856%{opacity:0.893}99.183%{opacity:0.95}99.51%{opacity:0.983}100%{opacity:1}}
+@keyframes cap-0{0%{opacity:1}30.392%{opacity:1}30.556%{opacity:0.962}30.719%{opacity:0.887}30.882%{opacity:0.779}31.209%{opacity:0.532}31.373%{opacity:0.424}31.536%{opacity:0.334}31.699%{opacity:0.259}31.863%{opacity:0.198}32.19%{opacity:0.107}32.516%{opacity:0.05}32.843%{opacity:0.017}33.333%{opacity:0}97.059%{opacity:0}97.222%{opacity:0.038}97.386%{opacity:0.113}97.549%{opacity:0.221}97.876%{opacity:0.468}98.039%{opacity:0.576}98.203%{opacity:0.666}98.366%{opacity:0.741}98.529%{opacity:0.802}98.856%{opacity:0.893}99.183%{opacity:0.95}99.51%{opacity:0.983}100%{opacity:1}}
+@keyframes grp-1{0%{opacity:0}30.392%{opacity:0}30.556%{opacity:0.038}30.719%{opacity:0.113}30.882%{opacity:0.221}31.209%{opacity:0.468}31.373%{opacity:0.576}31.536%{opacity:0.666}31.699%{opacity:0.741}31.863%{opacity:0.802}32.19%{opacity:0.893}32.516%{opacity:0.95}32.843%{opacity:0.983}33.333%{opacity:1}63.562%{opacity:1}63.725%{opacity:0}100%{opacity:0}}
+@keyframes cap-1{0%{opacity:0}30.392%{opacity:0}30.556%{opacity:0.038}30.719%{opacity:0.113}30.882%{opacity:0.221}31.209%{opacity:0.468}31.373%{opacity:0.576}31.536%{opacity:0.666}31.699%{opacity:0.741}31.863%{opacity:0.802}32.19%{opacity:0.893}32.516%{opacity:0.95}32.843%{opacity:0.983}33.333%{opacity:1}63.725%{opacity:1}63.889%{opacity:0.962}64.052%{opacity:0.887}64.216%{opacity:0.779}64.542%{opacity:0.532}64.706%{opacity:0.424}64.869%{opacity:0.334}65.033%{opacity:0.259}65.196%{opacity:0.198}65.523%{opacity:0.107}65.85%{opacity:0.05}66.176%{opacity:0.017}66.503%{opacity:0.002}100%{opacity:0}}
+@keyframes grp-2{0%{opacity:0}63.725%{opacity:0}63.889%{opacity:0.038}64.052%{opacity:0.113}64.216%{opacity:0.221}64.542%{opacity:0.468}64.706%{opacity:0.576}64.869%{opacity:0.666}65.033%{opacity:0.741}65.196%{opacity:0.802}65.523%{opacity:0.893}65.85%{opacity:0.95}66.176%{opacity:0.983}66.667%{opacity:1}96.895%{opacity:1}97.059%{opacity:0}100%{opacity:0}}
+@keyframes cap-2{0%{opacity:0}63.725%{opacity:0}63.889%{opacity:0.038}64.052%{opacity:0.113}64.216%{opacity:0.221}64.542%{opacity:0.468}64.706%{opacity:0.576}64.869%{opacity:0.666}65.033%{opacity:0.741}65.196%{opacity:0.802}65.523%{opacity:0.893}65.85%{opacity:0.95}66.176%{opacity:0.983}66.667%{opacity:1}97.059%{opacity:1}97.222%{opacity:0.962}97.386%{opacity:0.887}97.549%{opacity:0.779}97.876%{opacity:0.532}98.039%{opacity:0.424}98.203%{opacity:0.334}98.366%{opacity:0.259}98.529%{opacity:0.198}98.856%{opacity:0.107}99.183%{opacity:0.05}99.51%{opacity:0.017}100%{opacity:0}}
+/* loading-demo:end */
 </style>
 <script>document.addEventListener('keydown',function(event){var k=event.key;var ctrl=event.ctrlKey;var cmd=event.metaKey;var shift=event.shiftKey;var shortcuts=['F5','Shift+F5','Ctrl+R','Ctrl+Shift+R','Cmd+R','Cmd+Shift+R','F12','Ctrl+Shift+I','Ctrl+Shift+J'];var reload=k==='F5'||((ctrl||cmd)&&(k==='r'||k==='R'));var tools=k==='F12'||((ctrl||cmd)&&shift&&(k==='I'||k==='i'||k==='J'||k==='j'));if(shortcuts.length&&(reload||tools)){event.stopImmediatePropagation();}},true);</script>
 </head>
@@ -99,8 +146,75 @@ body { background-image: linear-gradient(var(--page-top), var(--page-bottom)); b
   </g>
 </svg>
     <div class="below">
-    <svg id="demo" aria-hidden="true"></svg>
-    <div class="caption" id="caption">Drag a rectangle that adds up to <b id="caption-target">12</b>.</div>
+    <!-- loading-demo:begin -->
+<div id="demo2" aria-hidden="true" style="width:197.12px;height:185.12px">
+<div class="d-board" style="top:32px;width:197.12px;height:153.12px;border-radius:20.627px">
+<div class="d-side" style="left:54.56px;top:29.92px;width:38.72px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div>
+<div class="d-side" style="left:98.56px;top:29.92px;width:38.72px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div>
+<div class="d-side" style="left:54.56px;top:73.92px;width:38.72px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div>
+<div class="d-side" style="left:98.56px;top:73.92px;width:38.72px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div>
+<div class="d-foot d-on d-round" id="foot-1" style="left:54.56px;top:10.56px;width:38.72px;height:41.43px;border-radius:10.067px;background:#d5d1c9;animation-name:foot"></div>
+<div class="d-foot d-on d-round" id="foot-2" style="left:98.56px;top:10.56px;width:38.72px;height:41.43px;border-radius:10.067px;background:#d5d1c9;animation-name:foot"></div>
+<div class="d-foot d-on d-round" id="foot-5" style="left:54.56px;top:54.56px;width:38.72px;height:41.43px;border-radius:10.067px;background:#d5d1c9;animation-name:foot"></div>
+<div class="d-foot d-on d-round" id="foot-6" style="left:98.56px;top:54.56px;width:38.72px;height:41.43px;border-radius:10.067px;background:#d5d1c9;animation-name:foot"></div>
+<div class="d-grp d-on d-loop" id="grp-0" style="left:0;top:0;width:100%;height:100%;animation-name:grp-0">
+<div class="d-tok" style="left:10.56px;top:10.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">5</div></div>
+<div class="d-face d-on d-round" id="tok-0-1" style="left:54.56px;top:10.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-1">2</div>
+<div class="d-face d-on d-round" id="tok-0-2" style="left:98.56px;top:10.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-2">4</div>
+<div class="d-tok" style="left:142.56px;top:10.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">9</div></div>
+<div class="d-tok" style="left:10.56px;top:54.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">6</div></div>
+<div class="d-face d-on d-round" id="tok-0-5" style="left:54.56px;top:54.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-5">1</div>
+<div class="d-face d-on d-round" id="tok-0-6" style="left:98.56px;top:54.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-5">5</div>
+<div class="d-tok" style="left:142.56px;top:54.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">3</div></div>
+<div class="d-tok" style="left:10.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">1</div></div>
+<div class="d-tok" style="left:54.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">1</div></div>
+<div class="d-tok" style="left:98.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">3</div></div>
+<div class="d-tok" style="left:142.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">8</div></div>
+<div class="d-tag d-on d-round" id="tag-0-2" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#17706F;box-shadow:0 2px 0 #0e4343;color:#FFFFFF;font-size:16px;line-height:24px;animation-name:tag-s0">2</div>
+<div class="d-tag d-on d-round" id="tag-0-6" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#17706F;box-shadow:0 2px 0 #0e4343;color:#FFFFFF;font-size:16px;line-height:24px;animation-name:tag-s1">6</div>
+<div class="d-tag d-on d-round" id="tag-0-12" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#E2541C;box-shadow:0 2px 0 #9A3209;color:#FFFFFF;font-size:18px;line-height:24px;animation-name:tag-s2">12</div>
+</div>
+<div class="d-grp d-on d-loop" id="grp-1" style="left:0;top:0;width:100%;height:100%;animation-name:grp-1">
+<div class="d-tok" style="left:10.56px;top:10.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">8</div></div>
+<div class="d-face d-on d-round" id="tok-1-1" style="left:54.56px;top:10.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-1">3</div>
+<div class="d-face d-on d-round" id="tok-1-2" style="left:98.56px;top:10.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-2">4</div>
+<div class="d-tok" style="left:142.56px;top:10.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">1</div></div>
+<div class="d-tok" style="left:10.56px;top:54.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">7</div></div>
+<div class="d-face d-on d-round" id="tok-1-5" style="left:54.56px;top:54.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-5">2</div>
+<div class="d-face d-on d-round" id="tok-1-6" style="left:98.56px;top:54.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-5">6</div>
+<div class="d-tok" style="left:142.56px;top:54.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">5</div></div>
+<div class="d-tok" style="left:10.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">9</div></div>
+<div class="d-tok" style="left:54.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">5</div></div>
+<div class="d-tok" style="left:98.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">6</div></div>
+<div class="d-tok" style="left:142.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">4</div></div>
+<div class="d-tag d-on d-round" id="tag-1-3" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#17706F;box-shadow:0 2px 0 #0e4343;color:#FFFFFF;font-size:16px;line-height:24px;animation-name:tag-s0">3</div>
+<div class="d-tag d-on d-round" id="tag-1-7" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#17706F;box-shadow:0 2px 0 #0e4343;color:#FFFFFF;font-size:16px;line-height:24px;animation-name:tag-s1">7</div>
+<div class="d-tag d-on d-round" id="tag-1-15" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#E2541C;box-shadow:0 2px 0 #9A3209;color:#FFFFFF;font-size:18px;line-height:24px;animation-name:tag-s2">15</div>
+</div>
+<div class="d-grp d-on d-loop" id="grp-2" style="left:0;top:0;width:100%;height:100%;animation-name:grp-2">
+<div class="d-tok" style="left:10.56px;top:10.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">2</div></div>
+<div class="d-face d-on d-round" id="tok-2-1" style="left:54.56px;top:10.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-1">1</div>
+<div class="d-face d-on d-round" id="tok-2-2" style="left:98.56px;top:10.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-2">2</div>
+<div class="d-tok" style="left:142.56px;top:10.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">4</div></div>
+<div class="d-tok" style="left:10.56px;top:54.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">4</div></div>
+<div class="d-face d-on d-round" id="tok-2-5" style="left:54.56px;top:54.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-5">3</div>
+<div class="d-face d-on d-round" id="tok-2-6" style="left:98.56px;top:54.56px;width:38.72px;height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px;animation-name:tok-5">4</div>
+<div class="d-tok" style="left:142.56px;top:54.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">6</div></div>
+<div class="d-tok" style="left:10.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">5</div></div>
+<div class="d-tok" style="left:54.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">1</div></div>
+<div class="d-tok" style="left:98.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">1</div></div>
+<div class="d-tok" style="left:142.56px;top:98.56px;width:38.72px;height:41.43px"><div class="d-side" style="top:19.36px;height:22.07px;border-radius:0 0 10.067px 10.067px"></div><div class="d-face" style="height:38.72px;border-radius:10.067px;font-size:27.104px;line-height:38.72px">7</div></div>
+<div class="d-tag d-on d-round" id="tag-2-1" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#17706F;box-shadow:0 2px 0 #0e4343;color:#FFFFFF;font-size:16px;line-height:24px;animation-name:tag-s0">1</div>
+<div class="d-tag d-on d-round" id="tag-2-3" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#17706F;box-shadow:0 2px 0 #0e4343;color:#FFFFFF;font-size:16px;line-height:24px;animation-name:tag-s1">3</div>
+<div class="d-tag d-on d-round" id="tag-2-10" style="left:-18px;top:-24.08px;width:36px;height:24px;border-radius:8px;background:#E2541C;box-shadow:0 2px 0 #9A3209;color:#FFFFFF;font-size:18px;line-height:24px;animation-name:tag-s2">10</div>
+</div>
+<div class="d-sel d-on d-round" id="sel-calm" style="left:51.92px;top:7.92px;animation-name:sel-calm-o"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:0;top:0;width:20px;height:20px;border:2.5px solid #17706F;border-radius:10px"></div></div><div class="d-p d-on d-round" style="left:10px;top:0;animation-name:sel-calm-tr"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:-10px;top:0;width:20px;height:20px;border:2.5px solid #17706F;border-radius:10px"></div></div></div><div class="d-p d-on d-round" style="left:0;top:10px;animation-name:sel-calm-bl"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:0;top:-10px;width:20px;height:20px;border:2.5px solid #17706F;border-radius:10px"></div></div></div><div class="d-p d-on d-round" style="left:10px;top:10px;animation-name:sel-calm-br"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:-10px;top:-10px;width:20px;height:20px;border:2.5px solid #17706F;border-radius:10px"></div></div></div><div class="d-bar d-on d-round" style="left:10px;top:0;width:100px;height:2.5px;background:#17706F;animation-name:sel-calm-hx"></div><div class="d-bar d-on d-round" style="left:10px;top:0;width:100px;height:2.5px;background:#17706F;animation-name:sel-calm-hb"></div><div class="d-bar d-on d-round" style="left:0;top:10px;width:2.5px;height:100px;background:#17706F;animation-name:sel-calm-vy"></div><div class="d-bar d-on d-round" style="left:0;top:10px;width:2.5px;height:100px;background:#17706F;animation-name:sel-calm-vr"></div><div class="d-bar d-on d-round" style="left:2.5px;top:2.5px;width:100px;height:100px;background:rgba(23,112,111,0.12);animation-name:sel-calm-fm"></div></div>
+<div class="d-sel d-on d-round" id="sel-exact" style="left:51.92px;top:7.92px;animation-name:sel-exact-o"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:0;top:0;width:20px;height:20px;border:4px solid #B23A0C;border-radius:10px"></div></div><div class="d-p d-on d-round" style="left:10px;top:0;animation-name:sel-calm-tr"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:-10px;top:0;width:20px;height:20px;border:4px solid #B23A0C;border-radius:10px"></div></div></div><div class="d-p d-on d-round" style="left:0;top:10px;animation-name:sel-calm-bl"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:0;top:-10px;width:20px;height:20px;border:4px solid #B23A0C;border-radius:10px"></div></div></div><div class="d-p d-on d-round" style="left:10px;top:10px;animation-name:sel-calm-br"><div class="d-c" style="left:0px;top:0px;width:10px;height:10px"><div style="position:absolute;left:-10px;top:-10px;width:20px;height:20px;border:4px solid #B23A0C;border-radius:10px"></div></div></div><div class="d-bar d-on d-round" style="left:10px;top:0;width:100px;height:4px;background:#B23A0C;animation-name:sel-calm-hx"></div><div class="d-bar d-on d-round" style="left:10px;top:0;width:100px;height:4px;background:#B23A0C;animation-name:sel-exact-hb"></div><div class="d-bar d-on d-round" style="left:0;top:10px;width:4px;height:100px;background:#B23A0C;animation-name:sel-calm-vy"></div><div class="d-bar d-on d-round" style="left:0;top:10px;width:4px;height:100px;background:#B23A0C;animation-name:sel-exact-vr"></div><div class="d-bar d-on d-round" style="left:4px;top:4px;width:100px;height:100px;background:rgba(226,84,28,0.16);animation-name:sel-exact-fm"></div></div>
+</div>
+</div>
+<div class="caption d-caps"><div class="d-cap d-on d-loop" id="cap-0" style="animation-name:cap-0">Drag a rectangle that adds up to <b>12</b>.</div><div class="d-cap d-on d-loop" id="cap-1" style="animation-name:cap-1">Drag a rectangle that adds up to <b>15</b>.</div><div class="d-cap d-on d-loop" id="cap-2" style="animation-name:cap-2">Drag a rectangle that adds up to <b>10</b>.</div></div>
+<script>(function(){var round=3400,exact=1430,boards=3,randomOrder=true;var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var board=still||!randomOrder?0:Math.floor(Math.random()*boards);document.documentElement.style.setProperty('--demo-delay',(-(board*round+(still?exact:0)))+'ms');if(still)document.documentElement.classList.add('demo-still');})();</script>
+<!-- loading-demo:end -->
     <div class="progress" role="progressbar" aria-label="Loading Klaar!" id="progress">
       <div class="track"><div class="fill" id="fill"></div></div>
       <div class="amount" id="amount">Loading</div>
@@ -138,9 +252,8 @@ const P = {
   tagHeight: 24, tagMinWidth: 36, tagPadding: 6, tagRadius: 8, tagEdge: 2, tagFont: 16, tagFontExact: 18, tagOffset: 8,
   sinkRatio: 0.5, clearScale: 0.2, footprint: 0.12,
   ms: {
-    start: 400,        // first board at rest before the finger arrives
-    next: 200,         // the same pause on every later board (the fade-in already gives a beat)
-    press: 120,        // the rectangle appears under the finger
+    next: 100,         // every round waits this long, then the finger arrives
+    press: 80,         // the rectangle appears under the finger
     drag: 1250,        // one continuous drag: across to the second token, curving down over the next two
     exactHold: 520,    // finger still down on the exact match
     sink: 260,         // clear_ms: covered tokens sink, cleared tokens shrink and fade
@@ -153,140 +266,6 @@ const P = {
   colours: { board: '#CFCBC2', token: '#FFFFFF', tokenEdge: '#ADA89E', digit: '#24252B',
     calmFill: '#17706F', onCalm: '#FFFFFF', accent: '#E2541C', accentLine: '#B23A0C', accentEdge: '#9A3209', onAccent: '#FFFFFF' },
 };
-
-(function demo() {
-  const svg = document.getElementById('demo'), NS = 'http://www.w3.org/2000/svg';
-  const captionTarget = document.getElementById('caption-target');
-  const C = P.colours, gap = Math.max(P.gapMin, P.pitch * P.gapRatio), S = P.pitch - gap;
-  const edge = Math.max(P.edgeMin, S * P.edgeRatio), r = S * P.radiusRatio, pad = 2 * gap;
-  const W = P.cols * P.pitch + 4 * gap, H = P.rows * P.pitch + 4 * gap, top = P.tagHeight + P.tagOffset;
-  svg.setAttribute('width', W); svg.setAttribute('height', H + top); svg.setAttribute('viewBox', `0 ${-top} ${W} ${H + top}`);
-  const el = (n, a, parent = svg) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); parent.appendChild(e); return e; };
-  const mix = (a, b, t) => { const p = h => [1, 3, 5].map(i => parseInt(h.substr(i, 2), 16)); const x = p(a), y = p(b);
-    return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join(''); };
-  el('rect', { x: 0, y: 0, width: W, height: H, rx: r + pad, fill: C.board });
-  const feet = [], tokens = [];
-  for (let rw = 0; rw < P.rows; rw++) for (let c = 0; c < P.cols; c++) {
-    const x = pad + c * P.pitch, y = pad + rw * P.pitch;
-    const f = el('rect', { x, y, width: S, height: S, rx: r, fill: mix(C.board, C.token, P.footprint), opacity: 0 });
-    const g = el('g', {});
-    const side = el('rect', { x, y, width: S, height: S + edge, rx: r, fill: C.tokenEdge }, g);
-    el('rect', { x, y, width: S, height: S, rx: r, fill: C.token }, g);
-    const t = el('text', { x: x + S / 2, y: y + S / 2, 'text-anchor': 'middle', 'dominant-baseline': 'central',
-      'font-family': 'KlaarDigits, sans-serif', 'font-weight': 700, 'font-size': S * P.digitRatio, fill: C.digit }, g);
-    feet.push(f); tokens.push({ c, rw, x, y, g, side, t, sink: 0, dragged: P.drag.some(([dc, dr]) => dc === c && dr === rw) });
-  }
-  const sel = el('rect', { fill: 'none', opacity: 0 });
-  const tag = el('g', { opacity: 0 });
-  const tagEdge = el('rect', { rx: P.tagRadius, height: P.tagHeight }, tag);
-  const tagFace = el('rect', { rx: P.tagRadius, height: P.tagHeight }, tag);
-  const tagText = el('text', { 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-family': 'KlaarDigits, sans-serif', 'font-weight': 700 }, tag);
-
-  const bez = (x1, y1, x2, y2) => t => { if (t <= 0) return 0; if (t >= 1) return 1; let lo = 0, hi = 1, m;
-    for (let i = 0; i < 24; i++) { m = (lo + hi) / 2; const x = 3 * (1 - m) * (1 - m) * m * x1 + 3 * (1 - m) * m * m * x2 + m * m * m; if (x < t) lo = m; else hi = m; }
-    return 3 * (1 - m) * (1 - m) * m * y1 + 3 * (1 - m) * m * m * y2 + m * m * m; };
-  const E = bez(...P.ease), D = bez(...P.dragEase), lerp = (a, b, t) => a + (b - a) * t, clamp = t => Math.max(0, Math.min(1, t));
-
-  // The finger: it presses in the gap above-left of the first token, then its corner follows one
-  // smooth curve (Catmull-Rom through three points): just past the first token, along the row past
-  // the second, then down past the bottom row of the 2 x 2. The rectangle runs from press to corner.
-  const c0 = Math.min(...P.drag.map(d => d[0])), r0 = Math.min(...P.drag.map(d => d[1]));
-  const c1 = Math.max(...P.drag.map(d => d[0])), r1 = Math.max(...P.drag.map(d => d[1]));
-  const press = [pad + c0 * P.pitch - gap / 2, pad + r0 * P.pitch - gap / 2];
-  const endPt = [pad + (c1 + 1) * P.pitch - gap / 2, pad + (r1 + 1) * P.pitch - gap / 2 + edge * 0.5];
-  const way = [press, [pad + c0 * P.pitch + S * 0.72, pad + r0 * P.pitch + S * 0.78],
-    [endPt[0] - gap * 0.2, pad + r0 * P.pitch + S + edge * 0.5], endPt];
-  const cr = (p0, p1, p2, p3, t) => { const t2 = t * t, t3 = t2 * t;
-    return [0, 1].map(i => 0.5 * (2 * p1[i] + (-p0[i] + p2[i]) * t + (2 * p0[i] - 5 * p1[i] + 4 * p2[i] - p3[i]) * t2 + (-p0[i] + 3 * p1[i] - 3 * p2[i] + p3[i]) * t3)); };
-  // arc-length table so the eased progress moves the finger at an even pace along the curve
-  const pts = [way[0], ...way, way[way.length - 1]], N = 240, samples = [], lens = [0];
-  for (let i = 0; i <= N; i++) { const u = i / N * (way.length - 1), k = Math.min(Math.floor(u), way.length - 2);
-    samples.push(cr(pts[k], pts[k + 1], pts[k + 2], pts[k + 3], u - k));
-    if (i) lens.push(lens[i - 1] + Math.hypot(samples[i][0] - samples[i - 1][0], samples[i][1] - samples[i - 1][1])); }
-  const along = f => { const want = f * lens[N]; let i = 1; while (i < N && lens[i] < want) i++;
-    const a = lens[i - 1], b = lens[i], u = b > a ? (want - a) / (b - a) : 0; return [lerp(samples[i - 1][0], samples[i][0], u), lerp(samples[i - 1][1], samples[i][1], u)]; };
-
-  const m = P.ms;
-  let lead, dragStart, release, restEnd, loop;   // one round's timeline; the first round waits longer
-  const plan = first => { lead = first ? m.start : m.next; dragStart = lead + m.press; release = dragStart + m.drag + m.exactHold;
-    restEnd = release + Math.max(m.sink, m.tagHold + m.tagFade) + m.rest; loop = restEnd + m.swap; };
-  plan(true);
-  window.klaarRound = () => ({ first: m.start + m.press + m.drag + m.exactHold + Math.max(m.sink, m.tagHold + m.tagFade) + m.rest + m.swap,
-    later: m.next + m.press + m.drag + m.exactHold + Math.max(m.sink, m.tagHold + m.tagFade) + m.rest + m.swap });
-  let board = 0;
-  function load(i) { board = i; const b = P.boards[i];
-    tokens.forEach(o => { o.t.textContent = b.digits[o.rw][o.c]; o.sink = 0; });
-    captionTarget.textContent = b.target; }
-
-  function frame(now, dt) {
-    const b = P.boards[board];
-    let box = null;
-    if (now >= lead && now < release) {
-      const corner = along(D(clamp((now - dragStart) / m.drag)));
-      box = [press[0], press[1], Math.max(press[0] + 2, corner[0]), Math.max(press[1] + 2, corner[1])];
-    }
-    // a token counts once the rectangle covers its centre (as in the game)
-    const covered = o => box && o.x + S / 2 >= box[0] && o.x + S / 2 <= box[2] && o.y + S / 2 >= box[1] && o.y + S / 2 <= box[3];
-    let sum = 0; tokens.forEach(o => { if (covered(o)) sum += b.digits[o.rw][o.c]; });
-    const exact = sum === b.target;
-    if (box) {
-      const w = exact ? P.outlineExact : P.outlineSelecting, col = exact ? C.accentLine : C.calmFill;
-      sel.setAttribute('x', box[0] + w / 2); sel.setAttribute('y', box[1] + w / 2);
-      sel.setAttribute('width', Math.max(0, box[2] - box[0] - w)); sel.setAttribute('height', Math.max(0, box[3] - box[1] - w));
-      sel.setAttribute('rx', Math.max(0, P.selRadius - w / 2)); sel.setAttribute('stroke', col); sel.setAttribute('stroke-width', w);
-      sel.setAttribute('fill', exact ? C.accent : C.calmFill); sel.setAttribute('fill-opacity', exact ? P.fillExact : P.fillSelecting);
-      sel.setAttribute('opacity', E(clamp((now - lead) / m.press)));
-    } else sel.setAttribute('opacity', 0);
-    // the sum tag: centred above the rectangle, kept inside the board; held, then faded after release
-    if ((box && sum > 0) || (now >= release && now < release + m.tagHold + m.tagFade)) {
-      if (box) { frame.lastBox = box; frame.lastSum = sum; }
-      const bx = frame.lastBox, sm = frame.lastSum, ex = sm === b.target;
-      const fs = ex ? P.tagFontExact : P.tagFont, tw = Math.max(P.tagMinWidth, fs * 0.62 * String(sm).length + 2 * P.tagPadding);
-      const cx = Math.max(tw / 2, Math.min(W - tw / 2, (bx[0] + bx[2]) / 2)), ty = bx[1] - P.tagOffset - P.tagHeight;
-      tagEdge.setAttribute('x', cx - tw / 2); tagEdge.setAttribute('y', ty + P.tagEdge); tagEdge.setAttribute('width', tw);
-      tagFace.setAttribute('x', cx - tw / 2); tagFace.setAttribute('y', ty); tagFace.setAttribute('width', tw);
-      tagEdge.setAttribute('fill', ex ? C.accentEdge : mix(C.calmFill, '#000000', 0.4)); tagFace.setAttribute('fill', ex ? C.accent : C.calmFill);
-      tagText.setAttribute('x', cx); tagText.setAttribute('y', ty + P.tagHeight / 2 + 1); tagText.setAttribute('font-size', fs);
-      tagText.setAttribute('fill', ex ? C.onAccent : C.onCalm); tagText.textContent = sm;
-      tag.setAttribute('opacity', now < release ? 1 : 1 - clamp((now - release - m.tagHold) / m.tagFade));
-    } else tag.setAttribute('opacity', 0);
-    // tokens: sink while covered (eased toward rest over clear_ms); the 2 x 2 clears on release
-    const k = 1 - Math.exp(-dt / (m.sink / 3));
-    for (let i = 0; i < tokens.length; i++) {
-      const o = tokens[i];
-      o.sink += ((covered(o) ? 1 : 0) - o.sink) * k;
-      let scale = 1, alpha = 1, foot = 0, dy = o.sink * edge * P.sinkRatio;
-      if (o.dragged && now >= release) {
-        const u = E(clamp((now - release) / m.sink));
-        scale = lerp(1, P.clearScale, u); alpha = 1 - u; foot = u; dy = edge * P.sinkRatio;
-      }
-      if (now >= restEnd) {   // the next board: every token fades in at rest, footprints go
-        const v = E(clamp((now - restEnd) / m.swap)); scale = 1; dy = 0; o.sink = 0;
-        alpha = v; foot = o.dragged ? 1 - v : 0;
-      }
-      const cx = o.x + S / 2, cy = o.y + S / 2;
-      o.g.setAttribute('transform', `translate(${cx} ${cy + dy}) scale(${scale}) translate(${-cx} ${-cy})`);
-      o.side.setAttribute('height', S + edge - dy);
-      o.g.setAttribute('opacity', alpha);
-      feet[i].setAttribute('opacity', foot);
-    }
-  }
-  const still = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || window.KLAAR_STILL === true;
-  window.klaarDemo = { stopped: false };
-  load(P.order === 'random' ? Math.floor(Math.random() * P.boards.length) : 0);
-  if (still) {   // reduced motion: the exact match, held still
-    for (const o of tokens) o.sink = o.dragged ? 1 : 0;
-    frame(dragStart + m.drag + 1, 0); return;
-  }
-  let t0 = performance.now(), last = t0, swapped = false;
-  (function tick(ts) {
-    if (window.klaarDemo.stopped) return;
-    let now = ts - t0;
-    if (now >= restEnd && !swapped) { load((board + 1) % P.boards.length); swapped = true; }
-    if (now >= loop) { t0 = ts; now = 0; swapped = false; plan(false); }
-    frame(now, Math.min(64, ts - last)); last = ts; requestAnimationFrame(tick);
-  })(t0);
-})();
 
 /* ---- The home screen's short-screen layout (cap top 45 instead of 85): measured on Klaar!'s own
    home screen, it switches below a height of about 777 px at 320 px wide, rising 0.38 px per px of
@@ -329,9 +308,9 @@ const KlaarStatus = (function () {
     fail(title, text) {
       document.getElementById('notice-title').textContent = title;
       document.getElementById('notice-text').textContent = text;
-      status.classList.add('failed'); window.klaarDemo.stopped = true;
+      status.classList.add('failed');
     },
-    done() { window.klaarDemo.stopped = true; status.classList.add('done'); setTimeout(() => status.remove(), 320); },
+    done() { status.classList.add('done'); setTimeout(() => status.remove(), 320); },
   };
 })();
 /* Godot's own start-up, as in its default shell (Godot 4.7), with the status calls pointed at KlaarStatus. */
