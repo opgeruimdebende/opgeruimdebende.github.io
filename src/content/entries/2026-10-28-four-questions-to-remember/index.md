@@ -25,8 +25,8 @@ Claude gave me three questions to ask whenever we discuss a decision. What will 
 
 **Claude:** Has this happened more than once, and is it written down already?
 
+![A page of my notebook with four handwritten questions: what will this make harder later, is this the second fix in this area, was that measured on the phone at full size, and has this happened more than once.](./four-questions-notebook.jpg)
+
 As we concluded this conversation, Claude offered to write everything up as a short document to keep with the project. I asked what that would be for.
 
 **Claude:** Your fourth question says not to make it. Everything a future session needs is already written down where it belongs. A second copy would drift out of date, and then you have two versions that disagree. That's exactly what the cold review kept finding in the code. Your written notebook already does the job.
-
-![A page of my notebook with four handwritten questions: what will this make harder later, is this the second fix in this area, was that measured on the phone at full size, and has this happened more than once.](./four-questions-notebook.jpg)
