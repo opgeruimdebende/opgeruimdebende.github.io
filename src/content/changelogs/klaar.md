@@ -6,6 +6,12 @@ game: klaar
 ---
 
 ## 29 October 2026
+- KLAAR! on the home screen and above the board is drawn in solid letters now, set a little closer together. Poke a letter and it presses down and springs back; slide along the word and the press follows your finger. The "!" nods.
+- Tokens are solid blocks: when you press one, its top sinks onto a base that stays put, instead of the whole token moving. A quick tap on a token presses it and lets go without selecting anything.
+- New colours in all four looks. The board sits slightly sunk into the page, the dark boards are lighter so the dark tokens stand out, and cleared spots fill in with cleaner tones.
+- The Play button is a brighter orange with a dark label in every look.
+- New solid icons on all the buttons.
+- Small fixes: on a phone, Go in Enter code is a regular button, as on desktop. A first Hap game no longer shows "Best 0 tokens". "Continue daily" is now "Play daily", and Stats says "Average tokens". On the top row, the sum now sits above the board instead of on your selection.
 - The background is one calm colour now. In the dark skin it showed faint horizontal stripes that slid around when a menu opened or the window changed size; they are gone. The page is a touch lighter at the bottom than before.
 - Opening a menu no longer flashes dark for a moment before the menu appears, most visible in the light skin. On desktop the menu card stays solid while it rises, instead of fading in see-through.
 - Menus now slow down gently as they settle, on phone and desktop alike, and the page behind them dims straight away instead of fading.
