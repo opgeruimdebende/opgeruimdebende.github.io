@@ -6,6 +6,9 @@ game: klaar
 ---
 
 ## 29 October 2026
+- Switching between light and dark on the home screen now repaints the daily and mode panels too. They sometimes kept the old colours, for example right after switching back from Hap.
+- The example board on the home screen shows its selection the way the game shows an exact match: an orange outline and an orange sum.
+- About says plainly what Klaar! does with your data: your save stays on your device, and the game doesn't send your data anywhere.
 - A new ending. When a game ends, the buttons step away and the board stays on screen as a picture of how you cleared it. The result slides up at the bottom with Play again. Pull it up for the details, push it down or tap the board to tuck it away, or press Enter to play again. On desktop the result takes the place of the side panel.
 - After a full clear, KLAAR! pops in letter by letter and the "!" nods in last. Once it rests, poke a letter, or a number in the row below it: each number plays its own note.
 - In Hap, the result now waits until the last note of the row has rung.
