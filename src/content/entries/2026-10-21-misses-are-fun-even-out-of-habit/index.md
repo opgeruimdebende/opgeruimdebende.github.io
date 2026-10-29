@@ -18,6 +18,4 @@ Habit taps plays sixteen misses, a tenth of a second apart. Try one take to hear
 
 <iframe src="/entries/2026-10-21-misses-are-fun-even-out-of-habit/habit-taps.html" title="Two buttons, Tap for a single miss and Habit taps for sixteen in a row, and a switch between four takes and one" width="100%" height="200" loading="lazy" class="embed"></iframe>
 
-[Open it on its own page](/entries/2026-10-21-misses-are-fun-even-out-of-habit/habit-taps.html)
-
 I am playtesting with sound and I find the thud to be really satisfying. I hope it survives a week of fidgeting.

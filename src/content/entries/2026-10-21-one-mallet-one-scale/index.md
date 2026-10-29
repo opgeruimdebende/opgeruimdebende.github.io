@@ -16,8 +16,6 @@ My favourite is what happens right after Klaar! pops in. Nine little tokens, 1 t
 
 <iframe src="/entries/2026-10-21-one-mallet-one-scale/nine-tokens.html" title="The nine tokens 1 to 9, each playing its note, and a Klaar! button that plays the whole phrase" width="100%" height="210" loading="lazy" class="embed"></iframe>
 
-[Open it on its own page](/entries/2026-10-21-one-mallet-one-scale/nine-tokens.html)
-
 We are building with music in mind, which we don't have yet. For Hap I want something like the music of the original apple-box game. It may not be the world's best composition, but it suits the game so well that playing with that song became part of the hype. So maybe it is one of the best puzzle game tunes. Wa will need its own, and I don't know yet what it should be. Not generic lo-fi lounge, that much I know.
 
 Once there is a song, the scale can follow its key. Then the Klaar! chord will sound like a small improvisation on whatever song it just interrupted, instead of something dropped on top. This is just an idea for now since we haven't started working on the game's music.
