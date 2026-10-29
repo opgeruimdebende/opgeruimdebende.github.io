@@ -6,6 +6,12 @@ game: klaar
 ---
 
 ## 29 October 2026
+- A new ending. When a game ends, the buttons step away and the board stays on screen as a picture of how you cleared it. The result slides up at the bottom with Play again. Pull it up for the details, push it down or tap the board to tuck it away, or press Enter to play again. On desktop the result takes the place of the side panel.
+- After a full clear, KLAAR! pops in letter by letter and the "!" nods in last. Once it rests, poke a letter, or a number in the row below it: each number plays its own note.
+- In Hap, the result now waits until the last note of the row has rung.
+- The target number sits right after KLAAR! as part of the word. It jumps, and the "!" nods, every time you clear.
+- Rewinding several moves at once: each token grows back over its own spot, instead of the spots going bare first.
+- The small example boards on the home screen can really be cleared now, with cleared spots shown the way the game shows them. The Wa and Hap panels in the daily card each wear their own mode's colours.
 - KLAAR! on the home screen and above the board is drawn in solid letters now, set a little closer together. Poke a letter and it presses down and springs back; slide along the word and the press follows your finger. The "!" nods.
 - Tokens are solid blocks: when you press one, its top sinks onto a base that stays put, instead of the whole token moving. A quick tap on a token presses it and lets go without selecting anything.
 - New colours in all four looks. The board sits slightly sunk into the page, the dark boards are lighter so the dark tokens stand out, and cleared spots fill in with cleaner tones.
