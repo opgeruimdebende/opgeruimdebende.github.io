@@ -12,7 +12,7 @@ Hi, I'm Minsung. I'm a service designer from Bron van Doen, a social design stud
 
 Our first game in active development is Klaar! It's a number puzzle where you make the sum, calm at one end and fast at the other. It will come out first as a free web game, and explore how people can have fun, together, with just adding numbers.
 
-I direct and design the projects, do creative writing, and also create art, sound, and music. We use Claude and Cursor for coding, testing, and building. We are curious about what is uniquely possible when you build and test games this way.
+I direct and design the projects, do creative writing, and also create art, sound, and music. We use Claude and Cursor for coding, testing, and building. We are curious about what is uniquely possible when you build and refine games this way.
 
 This devlog is where I'll share quick thoughts along the way: nothing too ambitious, just small insights and pictures from behind the scenes.
 
