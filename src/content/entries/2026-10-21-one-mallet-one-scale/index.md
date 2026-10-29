@@ -14,7 +14,7 @@ Claude made a single mallet note in code. Every musical sound in the game is tha
 
 My favourite is what happens right after Klaar! pops in. Nine little tokens, 1 to 9, burst out and tidy themselves into a row. Each one now plays a note as it lands, 1 the lowest and 9 the highest, so you can hear the row getting in order. Wa's celebration is shorter and modest compared to Hap's, which is rarer and gets to be more expressive.
 
-<iframe src="/entries/2026-10-21-one-mallet-one-scale/nine-tokens.html" title="The nine tokens 1 to 9, each playing its note, and a Klaar! button that plays the whole phrase" width="100%" height="190" loading="lazy" class="embed"></iframe>
+<iframe src="/entries/2026-10-21-one-mallet-one-scale/nine-tokens.html" title="The nine tokens 1 to 9, each playing its note, and a Klaar! button that plays the whole phrase" width="100%" height="210" loading="lazy" class="embed"></iframe>
 
 [Open it on its own page](/entries/2026-10-21-one-mallet-one-scale/nine-tokens.html)
 
