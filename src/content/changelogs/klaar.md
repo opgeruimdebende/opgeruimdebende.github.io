@@ -1,9 +1,13 @@
 ---
 title: Klaar! changelog
-date: 2026-10-28
+date: 2026-10-29
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 29 October 2026
+- The background is one calm colour now. In the dark skin it showed faint horizontal stripes that slid around when a menu opened or the window changed size; they are gone. The page is a touch lighter at the bottom than before.
+- Opening a menu no longer flashes dark for a moment before the menu appears, most visible in the light skin. On desktop the menu card stays solid while it rises, instead of fading in see-through.
 
 ## 28 October 2026
 - Klaar! has its own icon: a small board with 1, 2, 3 and 4, on your browser tab and when you add it to your home screen, instead of the engine's robot.
