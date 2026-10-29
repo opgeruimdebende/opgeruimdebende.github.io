@@ -1,6 +1,7 @@
 ---
 title: Same board, different games
 date: 2026-10-18
+time: "20:33"
 summary: The first daily puzzle is in, and I played it twice and got two different games.
 kind: devlog
 game: klaar

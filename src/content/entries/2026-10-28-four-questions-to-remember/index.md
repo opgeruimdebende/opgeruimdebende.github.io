@@ -1,6 +1,7 @@
 ---
 title: Four questions to remember
 date: 2026-10-28
+time: "10:09"
 updated: 2026-10-28
 summary: After the cold review I asked Claude how we stop repeating the same mistakes.
 kind: devlog

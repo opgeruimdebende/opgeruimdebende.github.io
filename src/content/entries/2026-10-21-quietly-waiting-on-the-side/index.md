@@ -1,6 +1,7 @@
 ---
 title: Quietly waiting on the side
 date: 2026-10-21
+time: "09:45"
 summary: A board left open on a second screen, and what that asks of the game.
 kind: devlog
 game: klaar

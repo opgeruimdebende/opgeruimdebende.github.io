@@ -1,6 +1,7 @@
 ---
 title: One mallet, one scale
 date: 2026-10-21
+time: "08:49"
 summary: Every musical sound in Klaar! is a mallet note played at different pitches.
 kind: devlog
 game: klaar

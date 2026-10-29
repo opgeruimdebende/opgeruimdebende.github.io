@@ -1,6 +1,7 @@
 ---
 title: Footsteps tracing a fleeting moment
 date: 2026-10-21
+time: "14:58"
 summary: Every cleared token now leaves a faint footprint on the board.
 kind: devlog
 game: klaar

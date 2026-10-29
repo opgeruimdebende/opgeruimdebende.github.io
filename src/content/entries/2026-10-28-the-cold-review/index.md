@@ -1,6 +1,7 @@
 ---
 title: The cold review
 date: 2026-10-28
+time: "00:53"
 summary: A fresh Claude agent read all of Klaar!'s code and asked what could be simpler. The aftermath was larger than I expected.
 kind: devlog
 game: klaar

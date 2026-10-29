@@ -21,6 +21,8 @@ const entries = defineCollection({
     .object({
       title: z.string(),
       date: z.coerce.date(),
+      // Optional time of day (HH:MM). Never shown: it only orders posts that share a date.
+      time: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/).optional(),
       updated: z.coerce.date().optional(),
       summary: z.string(),
       kind: z.enum(['devlog', 'note', 'build', 'statement']),

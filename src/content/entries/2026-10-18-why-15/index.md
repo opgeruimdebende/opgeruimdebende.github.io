@@ -1,6 +1,7 @@
 ---
 title: Why 15?
 date: 2026-10-18
+time: "14:41"
 summary: Target 10 turned out to be the odd one out, so Klaar! targets 15.
 kind: devlog
 game: klaar

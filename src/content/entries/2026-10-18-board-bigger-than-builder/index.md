@@ -1,6 +1,7 @@
 ---
 title: The board is bigger than the builder
 date: 2026-10-18
+time: "15:10"
 summary: The player rarely follows the builder's blueprint.
 kind: devlog
 game: klaar

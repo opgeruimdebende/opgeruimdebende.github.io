@@ -9,10 +9,13 @@ export const tagList = tags as Record<string, { label: string; about: string }>;
 export const gameList = games as Record<string, Game>;
 export const tagLabel = (id: string) => tagList[id]?.label ?? id;
 
-/** All entries, newest first; same date sorts by title. */
+/** All entries, newest first; same date sorts by the hidden `time`, then by title. */
 export async function allEntries(): Promise<Entry[]> {
   return (await getCollection('entries')).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf() || a.data.title.localeCompare(b.data.title),
+    (a, b) =>
+      b.data.date.valueOf() - a.data.date.valueOf() ||
+      (b.data.time ?? '').localeCompare(a.data.time ?? '') ||
+      a.data.title.localeCompare(b.data.title),
   );
 }
 

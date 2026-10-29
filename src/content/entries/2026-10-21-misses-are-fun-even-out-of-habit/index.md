@@ -1,6 +1,7 @@
 ---
 title: Misses are fun, even out of habit
 date: 2026-10-21
+time: "10:24"
 summary: A miss in Klaar! is built to feel good, even when you miss over and over again.
 kind: devlog
 game: klaar

@@ -1,6 +1,7 @@
 ---
 title: Hello world!
 date: 2026-10-18
+time: "11:53"
 summary: Who we are, what to expect, and making Klaar!
 kind: devlog
 game: klaar
