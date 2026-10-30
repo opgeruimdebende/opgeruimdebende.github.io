@@ -1,9 +1,17 @@
 ---
 title: Klaar! changelog
-date: 2026-10-29
+date: 2026-10-30
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 30 October 2026
+- Klaar! has a new sound. Every clear plays one soft mallet note, picked from how you play: quick runs, long thinks and pauses each sound a little different, so a game becomes your own small tune. Wa and Hap each have their own key. The wooden tock on a clear is gone.
+- Hap has a wooden beat under your notes, starting when the board goes live. A note that falls just before a beat waits for it; the rest play the moment you clear. Turn the beat off with Rhythm in Settings, right after Sound.
+- A miss is a soft, muted mallet tap in the tune's key instead of a wooden thud.
+- A board left open (no more moves, time up, or finishing early) ends on one soft note. The low strike at time up is gone.
+- A long rewind ticks a few times, each softer, instead of once for every move.
+- Hints, New best and the row of numbers after a full clear play in your tune's key.
 
 ## 29 October 2026
 - Switching between light and dark on the home screen now repaints the daily and mode panels too. They sometimes kept the old colours, for example right after switching back from Hap.
