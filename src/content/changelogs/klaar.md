@@ -6,6 +6,8 @@ game: klaar
 ---
 
 ## 30 October 2026
+- In Wa, a soft chord now breathes under your tune. It moves with your clears, not with a clock, opens up once most of the board is cleared, and fades to silence when you leave the board alone; your next clear brings it back. The Rhythm switch in Settings turns it off, as it does Hap's beat.
+- In Wa, a miss now knocks on low wood, tuned to the chord, instead of a muted note. Hap keeps its muted miss.
 - A full clear ends on its own little piece of music: three rolled chords, then the row of numbers lands one by one as a short tune. KLAAR! pops in with the first chord, the numbers burst out with the second, and the "!" nods in with the last. Wa settles warm and slow; Hap stops open, like the start of the next game. The swoosh and the single chord that used to play are gone.
 - The result waits until the last note has rung, so a full clear lingers a little longer than other endings.
 - A Wa clear with no rewinds and no hints adds one quiet high note, and the "!" nods once more.
