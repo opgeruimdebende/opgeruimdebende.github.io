@@ -6,6 +6,11 @@ game: klaar
 ---
 
 ## 30 October 2026
+- A full clear ends on its own little piece of music: three rolled chords, then the row of numbers lands one by one as a short tune. KLAAR! pops in with the first chord, the numbers burst out with the second, and the "!" nods in with the last. Wa settles warm and slow; Hap stops open, like the start of the next game. The swoosh and the single chord that used to play are gone.
+- The result waits until the last note has rung, so a full clear lingers a little longer than other endings.
+- A Wa clear with no rewinds and no hints adds one quiet high note, and the "!" nods once more.
+- In Hap, a full clear that beats your best on that board shows New best and plays its little nod after the tune.
+- The "!" nods a touch further back on its rebound.
 - Klaar! has a new sound. Every clear plays one soft mallet note, picked from how you play: quick runs, long thinks and pauses each sound a little different, so a game becomes your own small tune. Wa and Hap each have their own key. The wooden tock on a clear is gone.
 - Hap has a wooden beat under your notes, starting when the board goes live. A note that falls just before a beat waits for it; the rest play the moment you clear. Turn the beat off with Rhythm in Settings, right after Sound.
 - A miss is a soft, muted mallet tap in the tune's key instead of a wooden thud.
