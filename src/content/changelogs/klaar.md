@@ -6,6 +6,11 @@ game: klaar
 ---
 
 ## 31 October 2026
+- After a game, the round play button next to New board plays your game back, as you played it: every clear, miss, rewind and hint. On a computer it is Watch replay under New board, or the R key. Close (or Esc) takes you back to the result. The replay is silent for now.
+- A Hap replay runs at double speed. A long Wa game is shortened to under a minute, with long thinks kept longer than quick runs.
+- In a replay you can pause, step one move back or forward, or drag the bar to any moment. Small marks on the bar show where you missed or rewound.
+- When a replay ends, Share leads, in its own violet. For now it shares the board, as before.
+- A dimmed bookmark next to the result is a placeholder for keeping games you like. It does nothing yet.
 - The end of a game now starts with what you just did: the share of the board in Wa (100% on a clear) or your tokens in Hap. Pull the result up for the rest: your clears and any rewinds or hints in Wa, the share of the board in Hap, or how long a clear took, now in minutes and seconds.
 - On a board you played before, the result now says it compares with that board: "Try 3 · best on this board: 62%", or "your best on this board" when you beat it. In Wa a cleared best says which helpers it used, for example "cleared, 2 rewinds". Your best tokens on the board size no longer show under the result; New best still appears when you beat it.
 - In Hap, once you have cleared a board, a faster clear of it counts as your new best on that board, and the result shows its time.
