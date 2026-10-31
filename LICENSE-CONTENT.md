@@ -4,6 +4,8 @@
 
 **Games.** The game builds under `public/play/`, and screenshots and art from our games (including cartridge labels), are © 2026 Bron van Doen V.O.F., all rights reserved. You are welcome to use screenshots for press, reviews and commentary, with credit to Opgeruimde Bende.
 
+**Sound and music.** The sounds and music of our games, including the audio in the demos and embeds of this archive, are © 2026 Bron van Doen V.O.F., all rights reserved. They are not covered by CC BY, even when they sit inside an entry. You are welcome to listen, to link to them, and to use short excerpts in reviews and commentary, with credit to Opgeruimde Bende.
+
 **Names.** No licence here covers the names Opgeruimde Bende or Klaar!.
 
 Quotes from other people stay theirs and are not covered by this licence.
