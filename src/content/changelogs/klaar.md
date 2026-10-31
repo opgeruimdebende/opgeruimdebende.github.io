@@ -6,6 +6,11 @@ game: klaar
 ---
 
 ## 31 October 2026
+- The end of a game now starts with what you just did: the share of the board in Wa (100% on a clear) or your tokens in Hap. Pull the result up for the rest: your clears and any rewinds or hints in Wa, the share of the board in Hap, or how long a clear took, now in minutes and seconds.
+- On a board you played before, the result now says it compares with that board: "Try 3 · best on this board: 62%", or "your best on this board" when you beat it. In Wa a cleared best says which helpers it used, for example "cleared, 2 rewinds". Your best tokens on the board size no longer show under the result; New best still appears when you beat it.
+- In Hap, once you have cleared a board, a faster clear of it counts as your new best on that board, and the result shows its time.
+- One device holds up to 8 profiles. With 8, Your games says so where Add profile was.
+- In Your games, the number of tries no longer breaks across two lines next to a tag.
 - You can play a board again. Try again sits next to Finish here in the pause menu, and under the result when a game ends (pull the result up to see it). It starts the same board from the beginning. A daily you already played or cleared reads Try again too, and still counts as that day's daily.
 - The button that starts a fresh board after a game is now called New board, and Enter does the same.
 - On a board you played before, the result tells you which try it was and your best on that board, for example "Try 3 · your best: 62%", or "your best yet" when you beat it. Time never counts toward a best.
