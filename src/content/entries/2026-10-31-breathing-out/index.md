@@ -10,7 +10,7 @@ tags: [sound, feel]
 
 Wa is the slow mode, deliberately airy, but keeping it devoid of any background music made it feel comparatively unfinished, once Hap had its beat.
 
-So I started with a beat for Wa too, deliberately slower paced and spacious, of course. I recorded my own voice making a deep "doom" sound while gently tapping a pad, thinking of a janggu player carrying a pansori singer, believing it to be a great idea. In practice it fell apart. The freeform puzzle solving of Wa just doesn't sit on a regular beat.
+So I started with a beat for Wa too, deliberately slower paced and spacious, of course. I recorded my own voice making a deep "doom" sound while gently tapping a surface, thinking of a janggu player carrying a pansori singer, believing it to be a great idea. In practice it fell apart. The freeform puzzle solving of Wa just doesn't sit on a regular beat.
 
 The idea that eventually worked was a pad: a soft, low chord held under your notes. It doesn't follow a clock, and it never nudges you. Your clears progress the chord, patiently following your pace, whatever that is.
 
