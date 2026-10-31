@@ -1,9 +1,15 @@
 ---
 title: Klaar! changelog
-date: 2026-10-30
+date: 2026-10-31
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 31 October 2026
+- You can play a board again. Try again sits next to Finish here in the pause menu, and under the result when a game ends (pull the result up to see it). It starts the same board from the beginning. A daily you already played or cleared reads Try again too, and still counts as that day's daily.
+- The button that starts a fresh board after a game is now called New board, and Enter does the same.
+- On a board you played before, the result tells you which try it was and your best on that board, for example "Try 3 · your best: 62%", or "your best yet" when you beat it. Time never counts toward a best.
+- Stats is now called Your games. A board you played more than once is one row with its number of tries and your best result on it. Open the row to see every try, newest first, and play it once more with Try again.
 
 ## 30 October 2026
 - In Wa, a soft chord now breathes under your tune, starting with your first touch of the board. It moves with your clears, not with a clock, opens up once most of the board is cleared, and fades to silence when you leave the board alone; your next clear brings it back. The Rhythm switch in Settings turns it off, as it does Hap's beat.
