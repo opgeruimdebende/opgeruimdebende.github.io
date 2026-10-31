@@ -20,4 +20,4 @@ I prototyped this idea with Claude, and the first rough versions reminded me of 
 
 <iframe src="/entries/2026-10-31-you-play-your-own-tune/hear-a-game.html" title="Two of my own games, a Wa game and a Hap daily, played back as their tunes, each clear appearing as a dot as its note sounds" width="100%" height="400" loading="lazy" class="embed"></iframe>
 
-We call it Footnotes. The board already keeps your footprints; now your game leaves footnotes too. And because the tune comes from your moves alone, a finished game always repeats your unique tune. Your game is the sheet music, the rules are the instrument.
+We call it Footnotes. The board already keeps your footprints; now your game leaves footnotes too. And because the tune comes from your moves alone, a finished game always repeats your unique tune. Your play writes the sheet music, and Klaar! is the instrument.
