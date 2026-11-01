@@ -1,9 +1,24 @@
 ---
 title: Klaar! changelog
-date: 2026-10-31
+date: 2026-11-01
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 1 November 2026
+- A cleared tile no longer stays stuck on the board when you tap it just as it disappears.
+- A replay now shows each clear whole, with its final sum, instead of growing the box as you dragged it. Misses keep their own outline.
+- A Hap replay starts after a short pause and holds the last board for a moment, so the last move is no longer cut off.
+- The time under a replay is the game's own clock, and it runs smoothly instead of jumping from move to move.
+- A replay stays open when it ends. Press Play (or R) to watch it again, or Close to go back to the result.
+- Try again and Share are always there during a replay, so you no longer have to wait for the end.
+- On a computer, the replay's buttons sit in a card in the right column, with their keys shown on them.
+- On a phone, the replay's buttons sit under the board with names: Watch again, Back, Play, Next and Share. When the replay ends, the result shows there.
+- After a game on a computer, New board, Watch replay, Try again, Share and Home are one column of buttons, each with an icon. Watch replay uses the play icon and Try again a round arrow.
+- Every Share button after a game now says Share, in violet.
+- In Your games, opening a board you played more than once picks your best try; tap another try to pick that one. Share sits next to it, and Try again below a thin line. Copy for feedback is gone.
+- A dimmed bookmark in the Your games filter is a placeholder for games you keep. It does nothing yet.
+- A board size like 9 × 14 no longer breaks across two lines.
 
 ## 31 October 2026
 - After a game, the round play button next to New board plays your game back, as you played it: every clear, miss, rewind and hint. On a computer it is Watch replay under New board, or the R key. Close (or Esc) takes you back to the result. The replay is silent for now.
