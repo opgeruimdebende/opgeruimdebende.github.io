@@ -6,6 +6,18 @@ game: klaar
 ---
 
 ## 1 November 2026
+- Share after a game now sends your game: a link to the replay of how you played, with one sentence about your result, such as "I cleared 37% of this Klaar! board. Can you clear it all?"
+- On a computer, Share copies that sentence and the link together, ready to paste into a chat.
+- A shared link now opens on its board, covered: the tiles the other player cleared show as their picture, the rest lie face down, and their result sits on top. Play it yourself turns the board over and starts the game; Watch the replay shows how they played.
+- On a shared board, a first-time player gets one line on how to play. If you have played that board before, it shows your best, and Watch the replay comes first.
+- A board shared during a game opens the same way, so a Hap board no longer starts its countdown before you are ready.
+- After you play a shared board, your result shows the shared game too, with a button to watch its replay.
+- Today's daily opened from a link, or typed as a code, now counts as your daily.
+- In Your games, a try with a saved replay now has Watch replay.
+- In chat apps, a Klaar! link now shows a short line about the game.
+- While a shared link loads, the loading page says so, and its little demo uses the shared board's target.
+- On a short computer window, the result after a game takes less room, so every button fits.
+- On a phone, a long try line in Your games keeps "Best" on its first line.
 - A replay now plays the tune of your game: every clear, miss, rewind and hint sounds as it did when you played, and a full clear ends on the same chords. Stepping or dragging the bar stays silent.
 - In a Hap replay the beat keeps its usual tempo under the double-speed game, so the chord changes every bar. In a Wa replay the soft pad follows the chords.
 - A Hap replay now keeps the real timing of your moves, so quick moves follow each other as quickly as you made them.
