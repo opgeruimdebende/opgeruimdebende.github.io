@@ -6,6 +6,10 @@ game: klaar
 ---
 
 ## 1 November 2026
+- A replay now plays the tune of your game: every clear, miss, rewind and hint sounds as it did when you played, and a full clear ends on the same chords. Stepping or dragging the bar stays silent.
+- In a Hap replay the beat keeps its usual tempo under the double-speed game, so the chord changes every bar. In a Wa replay the soft pad follows the chords.
+- A Hap replay now keeps the real timing of your moves, so quick moves follow each other as quickly as you made them.
+- Replays leave out the New best sound and the clock's ticks.
 - On the web, the pictograms on Try again, New board, Home and the dimmed bookmark were missing. They are back.
 - After a game on a phone, the round play button's triangle sits in the middle again.
 - In a replay on a computer, the Time number is centred again.
