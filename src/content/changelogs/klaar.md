@@ -6,6 +6,11 @@ game: klaar
 ---
 
 ## 1 November 2026
+- On the web, the pictograms on Try again, New board, Home and the dimmed bookmark were missing. They are back.
+- After a game on a phone, the round play button's triangle sits in the middle again.
+- In a replay on a computer, the Time number is centred again.
+- In a replay, Back and Next now skip your misses, so every step changes the board. Misses still play when you press Play, and keep their marks on the bar.
+- In a Hap replay, the clock only turns orange in its last 10 seconds, as it does in a game.
 - A cleared tile no longer stays stuck on the board when you tap it just as it disappears.
 - A replay now shows each clear whole, with its final sum, instead of growing the box as you dragged it. Misses keep their own outline.
 - A Hap replay starts after a short pause and holds the last board for a moment, so the last move is no longer cut off.
