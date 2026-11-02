@@ -6,6 +6,10 @@ game: klaar
 ---
 
 ## 2 November 2026
+- On a phone, a replay keeps its own buttons: Rewind and Hint from the game no longer show through when your browser's bar slides in or out, and the end of the game no longer covers the replay.
+- In Your games, the Kept filter's list is now headed "Kept games".
+- A Hap game you finish early now shares the time you actually played, not the time limit.
+- The Daily puzzles card now says where the dailies come from.
 - Every game in Your games now keeps its replay, not only your newest 50, so you can watch any of them again.
 - Keep a try with the bookmark, at the end of a game or on its row in Your games. A kept try stays when older games make room for new ones, up to 50 per profile.
 - The Kept filter in Your games shows every try you kept, grouped by board, and how many of your 50 you have used.
