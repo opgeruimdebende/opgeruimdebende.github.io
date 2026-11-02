@@ -1,9 +1,22 @@
 ---
 title: Klaar! changelog
-date: 2026-11-01
+date: 2026-11-02
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 2 November 2026
+- Every game in Your games now keeps its replay, not only your newest 50, so you can watch any of them again.
+- Keep a try with the bookmark, at the end of a game or on its row in Your games. A kept try stays when older games make room for new ones, up to 50 per profile.
+- The Kept filter in Your games shows every try you kept, grouped by board, and how many of your 50 you have used.
+- Settings now says plainly where your games are kept, what can erase them, and when you last saved a backup.
+- After your first game, Klaar! asks your browser to keep its save safe. Firefox may ask you about it.
+- With Klaar! open in two tabs, only the newest tab saves. The older one says so, instead of quietly erasing the other tab's games.
+- If your browser briefly opens an older Klaar!, it now leaves a save made by this version alone and asks you to reload.
+- A Hap game that ran out of moves now says "No more moves" in its replay and in Your games.
+- The Wa average in Your games keeps counting a game after it leaves the list of your newest 200.
+- A game where you changed a setting while playing now plays the same tune in its replay as when you played it.
+- The first time you open this version, your save is converted to its new form; a copy of the old one is kept on your device.
 
 ## 1 November 2026
 - Share after a game now sends your game: a link to the replay of how you played, with one sentence about your result, such as "I cleared 37% of this Klaar! board. Can you clear it all?"
