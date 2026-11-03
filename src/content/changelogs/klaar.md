@@ -1,9 +1,19 @@
 ---
 title: Klaar! changelog
-date: 2026-11-02
+date: 2026-11-03
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 3 November 2026
+- Board codes no longer use the letter V in their seed, since it was easy to mistake for U. A V can still be a code's last character, the check that catches typos.
+- A new board or a daily never gets a code that spells a rude word in English, Dutch or Korean.
+- Because codes changed, the daily boards from today on are different boards from the ones the previous version would have shown.
+- Your games keep their boards and replays under their new codes. A few older games whose board has no code in the new form were removed; your totals and bests stay as they were.
+- Hap no longer shows the status light. It only ever meant something in Wa.
+- The playtest panel (F2) is gone from the game.
+- The Daily puzzles card now ends with "Have fun!"
+- The first time you open this version, your save is converted to its new form; a copy of the old one is kept on your device.
 
 ## 2 November 2026
 - On a phone, a replay keeps its own buttons: Rewind and Hint from the game no longer show through when your browser's bar slides in or out, and the end of the game no longer covers the replay.
