@@ -1,9 +1,14 @@
 ---
 title: Klaar! changelog
-date: 2026-11-03
+date: 2026-11-04
 summary: Every build of Klaar!, newest first, small fixes included.
 game: klaar
 ---
+
+## 4 November 2026
+- Klaar! has moved to its own web address. Your games stay with the old address, so open it once more, use Save backup in Settings, and Load backup at the new address. The old address then sends you on.
+- The game is a lighter download: 4.8 MB instead of 8 MB in my test.
+- Links you share now point to the new address. Links you shared before keep working.
 
 ## 3 November 2026
 - Board codes no longer use the letter V in their seed, since it was easy to mistake for U. A V can still be a code's last character, the check that catches typos.
