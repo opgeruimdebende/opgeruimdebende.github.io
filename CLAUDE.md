@@ -1,6 +1,6 @@
 # Working in this repository
 
-This is the Opgeruimde Bende archive, an Astro site served at https://opgeruimdebende.github.io. Every push to `main` is built and deployed by `.github/workflows/deploy.yml`. Pushing to `main` is publishing: do it only after the owner says "publish", after he has seen a preview. Any project with push access and related work may publish this way; two conversations never write here at the same time. One exception: a game's changelog is written and pushed by that game's coding lead as part of closing a release; it needs no "publish" and no preview. When it goes up is set in that game's lead skill (Klaar!: `klaar-lead`, Closing a release). If the owner then does not push that build, the lead reverts the entry.
+This is the Opgeruimde Bende archive, an Astro site served at https://opgeruimdebende.github.io. Every push to `main` is built and deployed by `.github/workflows/deploy.yml`. Pushing to `main` is publishing: do it only after the owner says "publish", after he has seen a preview. Any project with push access and related work may publish this way; two conversations never write here at the same time. One exception: a game's changelog is written and pushed by that game's coding lead as part of closing a release; it needs no "publish" and no preview. If the owner then does not push that build, the lead reverts the entry. Klaar!'s changelog no longer lives here: it is `site/src/changelog.md` in `minsungwang/klaar`, served at https://klaar.games/changelog/; `public/changelog/klaar/` forwards there.
 
 The look comes from the design system "Opgeruimde Bende" (a Claude design system artifact). The site's copy of its tokens is `src/styles/tokens.css`; patterns are in `src/styles/archive.css`. Change the design system first, then the site.
 
@@ -10,7 +10,7 @@ The look comes from the design system "Opgeruimde Bende" (a Claude design system
 | --- | --- | --- |
 | An entry (devlog, note, build, statement) | `src/content/entries/<id>/index.md`, images beside it | `/entries/<id>/` |
 | A small interactive embed for an entry | `public/entries/<id>/<name>.html` | `/entries/<id>/<name>.html` |
-| A game's changelog | `src/content/changelogs/<game>.md` | `/changelog/<game>/` |
+| A game's changelog (not Klaar!: it is at klaar.games/changelog/) | `src/content/changelogs/<game>.md` | `/changelog/<game>/` |
 | A game (name, line, shelf, label) | `src/data/games.json` | the cartridges on `/` and `/play/` |
 | A cartridge label (the game's own art, 288×240) | `public/labels/<game>.png` | |
 | A game's web build | `public/play/<game>/` | `/play/<game>/` |
