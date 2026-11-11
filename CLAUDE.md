@@ -18,9 +18,9 @@ The look comes from the design system "Opgeruimde Bende" (a Claude design system
 
 Files in `public/` are copied to the site byte for byte. Anything at the repository root outside `src/` and `public/` is not served.
 
-**`public/play/` belongs to the owner's local Godot export.** It is pushed from his computer and from nowhere else. Never edit, move, delete or reformat anything in it from the cloud.
+**`public/play/` belongs to the owner's local Godot export.** It is pushed from his computer and from nowhere else. Never edit, move, delete or reformat anything in it from the cloud. The exception is `public/play/klaar/`: Klaar! lives at klaar.games, and this folder holds only a forward page there that keeps the query (old `?p=` and `?r=` links).
 
-**Old addresses stay working.** `public/view.html` forwards the old reader's links (`?post=<id>`, `?page=klaar-changelog`), which released Klaar! builds still use. `public/posts/<id>/` holds redirect stubs for the old post addresses. Never remove these.
+**Old addresses stay working.** `public/view.html` forwards the old reader's links (`?post=<id>`, `?page=klaar-changelog`), which released Klaar! builds still use. `public/posts/<id>/` holds redirect stubs for the old post addresses. `public/play/klaar/` and `public/changelog/klaar/` forward to klaar.games. Never remove these.
 
 ## Entry fields
 
